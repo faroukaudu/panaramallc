@@ -3,8 +3,8 @@ const appadmin = require('./admin.js');
 
 const app = myModule.main;
 
-app.listen(process.env.PORT || 3000, function(req,res){
-  console.log("server is now starting @ 3000!");
+app.listen(process.env.PORT || 2000, function(req,res){
+  console.log("server is now starting @ 2000!");
 });
 
 app.use(function(req, res, next){
