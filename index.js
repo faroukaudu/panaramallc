@@ -1,4 +1,5 @@
 // https://www.learnwithjason.dev/blog/deploy-nodejs-ssl-digitalocean// deploy help info
+// https://www.freecodecamp.org/news/deploy-nodejs-app-server-to-production/
 const express = require('express');
 const ejs = require('ejs');
 const lodash = require('lodash');
