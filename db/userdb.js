@@ -26,13 +26,7 @@ const resetTokenSchmema = new mongoose.Schema({
 const userSchema = new mongoose.Schema({
   firstname:String,
   lastname:String,
-  email: {
-    type: String,
-    required: true,
-    match: /.+\@.+\..+/,
-    unique: true
-
-  },
+  email: String,
   password:String,
   transaction:[transactionSchema],
   resettoken:[{type:resetTokenSchmema, ref: "ResetToken"}],

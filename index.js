@@ -173,6 +173,7 @@ app.post("/register", function(req, res){
   //res.render("dashboard");
   console.log("successfully added");
 })
+
 })
 
 
