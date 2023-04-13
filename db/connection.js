@@ -1,7 +1,9 @@
 const mongoose = require("mongoose");
 mongoose.set('strictQuery', true);
+
+const uri = "mongodb+srv://fancy98com:E6eoFBqkfDsweSKB@cluster0.rom3xsn.mongodb.net/flyboy";
 async function database() {
-  await mongoose.connect('mongodb://127.0.0.1:27017/gitportalDB');
+  await mongoose.connect(uri);
 }
 
 var conn = mongoose.connection;

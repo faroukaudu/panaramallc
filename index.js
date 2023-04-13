@@ -20,12 +20,15 @@ app.use(express.static("public"));
 const passwrdResetToken = require('node-random-chars');
 
 //const Email = require('email').Email;
+const uri = "mongodb+srv://fancy98com:E6eoFBqkfDsweSKB@cluster0.rom3xsn.mongodb.net/flyboy";
+
 
 database().catch(err => console.log(err));
 
 
 async function database() {
-  await mongoose.connect('mongodb://127.0.0.1:27017/gitportalDB');
+  await mongoose.connect(uri);
+  // await mongoose.connect('mongodb://127.0.0.1:27017/gitportalDB');
 }
 //
 // userschema.plugin(uniqueValidator);
