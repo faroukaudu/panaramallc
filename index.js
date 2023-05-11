@@ -20,7 +20,8 @@ app.use(express.static("public"));
 const passwrdResetToken = require('node-random-chars');
 
 //const Email = require('email').Email;
-const uri = "mongodb+srv://fancy98com:E6eoFBqkfDsweSKB@cluster0.rom3xsn.mongodb.net/flyboy";
+//const uri = "mongodb+srv://fancy98com:E6eoFBqkfDsweSKB@cluster0.rom3xsn.mongodb.net/flyboy";
+const uri = "mongodb://127.0.0.1:27017/gitportalDB";
 
 
 database().catch(err => console.log(err));
@@ -178,7 +179,7 @@ app.post("/register", function(req, res){
 
 
 app.get("/dashboard", function(req, res){
-  res.render("dashboard/index");
+  res.render("dashboard/index",{name:"test",activeLink:"Me" });
 })
 
 app.get("/transactions", function(req, res){
@@ -254,16 +255,18 @@ User.findOne({email:req.body.resetemail}, async function(err, foundEmail){
       foundEmail.resettoken.pop();
       var newToken = {token:generatedToken,
                       email:foundEmail.email,
-                      time:dates.myTime()+" "+dates.myDate() };
+                      time:dates.myTime()+" "+dates.myDate()};
       foundEmail.resettoken.push(newToken);
       foundEmail.save();
-
-
-
-
       console.log("User found and the name is"+ foundEmail.firstname);
-      await sendingMails.emailSent(foundEmail.email, "Reset Password", generatedToken);
+      sendingMails.emailSent(foundEmail.email, "Reset Password", generatedToken);
       res.render("dashboard/auth/confirm-mail", {email:foundEmail.email});
+      //DELAY B4 EMAIL LINK EXPIRES
+  //     setTimeout(function() {
+  //   console.log("Email Link Expired");
+  //   clearToken(generatedToken,"tokenExpired",res);
+  //
+  // }, 10000);
     }else if(!foundEmail){
       console.log("User does not exist");
     }
@@ -291,12 +294,47 @@ app.get("/pwdtoken", function(req, res){
 
 
 });
+function clearToken (token, opp, res){
+  User.findOne({"resettoken": {$elemMatch: {token: token}}}, function(err,doc){
+    if(doc){
+      if(opp === "resetPassword"){
+
+      res.render("dashboard/auth/lock-screen",{firstname:doc.firstname,
+                                                  lastname:doc.lastname,
+                                                    id:doc._id});
+          console.log(doc.resettoken.length);
+          //Clearing Token array after Used & Save!!
+          doc.resettoken = [];
+          doc.save();
+      }else if(opp === "tokenExpired"){
+        //Clearing Token array after Expire
+        doc.resettoken =[];
+        doc.save();
+      }
+
+    }else{
+      res.write("Link Has expired or has been used!!!");
+    }
+  });
+
+}
 
 //TOKEN VERIFICATION END............
 
-//
-// app.get("/pwdtoken/:token", function(req, res){
-//   // req.params.token
+
+app.get("/pwdtoken/:token", function(req, res){
+  // req.params.token
+  console.log(req.params.token);
+  clearToken(req.params.token, "resetPassword", res);
+
+// User.find({"resettoken": {$elemMatch: {token: req.params.token}}}, function(err,doc){
+//   if(!err){
+//         res.render("dashboard/auth/lock-screen",{firstname:doc[0].firstname,
+//                                                 lastname:doc[0].lastname,
+//                                                 id:doc[0]._id});
+//     console.log(doc[0].resettoken[0].email);
+//   }
+// })
 //   User.aggregate([{$match: {"resettoken.token": req.params.token}}],
 //   function(err,foundT){
 //   if(foundT){
@@ -306,7 +344,10 @@ app.get("/pwdtoken", function(req, res){
 //     console.log("Userfound");
 //
 //   }
-// })});
+// })
+
+
+});
 
 
 
@@ -326,6 +367,11 @@ app.post("/newpwd", function(req,res){
 
 });
 //RE-WRITTING NEW PASSWORD TO DATABASE END/////
+
+//USERPROFILE VIEW START/////
+app.get("/profile", function(req,res){
+  res.render("dashboard/app//user-profile", {displayName:"profile"});
+})
 
 
 

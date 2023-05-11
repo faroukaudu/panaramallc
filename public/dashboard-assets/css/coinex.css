@@ -117,7 +117,7 @@
 
 /* approve button for admin start */
 
-  
+
 
 
 /* approve button for admin end */
@@ -239,7 +239,22 @@ small, .small {
   padding: 50px;
 }
 
+.balance h2{
 
+  color: #1aa053;
+
+}
+
+.balance {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mylogo{
+  width: 20%;
+  margin-left: -20px;
+  padding-right: -80px;
+}
 
 
 
@@ -12510,7 +12525,7 @@ body.offcanvas-active {
   right: 0px;
   z-index: 1250; }
   .loader.simple-loader .loader-body {
-    background: url(../images/loader.gif) no-repeat scroll center center;
+    background: url(../images/loadmain.gif) no-repeat scroll center center;
     background-size: 20%;
     width: 100%;
     height: 100%;
