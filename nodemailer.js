@@ -33,7 +33,8 @@ async function emailSent(to, subject, msg){
     from:"otps-verify@outlook.com",
     to: to,
     subject:subject,
-    text:"Click this link to reset your password.."+ " " +"http://localhost:2000/pwdtoken/"+msg,
+    //text:"Click this link to reset your password.."+ " " +"https://localhost:2000/pwdtoken/"+msg,
+    text:"Click this link to reset your password.."+ " " +"https://stingray-app-lgdmb.ondigitalocean.app/pwdtoken/"+msg,
 
   };
 

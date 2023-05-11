@@ -262,11 +262,11 @@ User.findOne({email:req.body.resetemail}, async function(err, foundEmail){
       sendingMails.emailSent(foundEmail.email, "Reset Password", generatedToken);
       res.render("dashboard/auth/confirm-mail", {email:foundEmail.email});
       //DELAY B4 EMAIL LINK EXPIRES
-  //     setTimeout(function() {
-  //   console.log("Email Link Expired");
-  //   clearToken(generatedToken,"tokenExpired",res);
-  //
-  // }, 10000);
+      setTimeout(function() {
+    console.log("Email Link Expired");
+    clearToken(generatedToken,"tokenExpired",res);
+
+  }, 10000);
     }else if(!foundEmail){
       console.log("User does not exist");
     }
