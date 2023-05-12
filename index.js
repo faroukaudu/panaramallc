@@ -266,7 +266,7 @@ User.findOne({email:req.body.resetemail}, async function(err, foundEmail){
     console.log("Email Link Expired");
     clearToken(generatedToken,"tokenExpired",res);
 
-  }, 10000);
+  }, 50000);
     }else if(!foundEmail){
       console.log("User does not exist");
     }
