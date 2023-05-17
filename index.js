@@ -21,7 +21,7 @@ const passwrdResetToken = require('node-random-chars');
 
 //const Email = require('email').Email;
 const uri = "mongodb+srv://fancy98com:E6eoFBqkfDsweSKB@cluster0.rom3xsn.mongodb.net/flyboy";
-//const uri = "mongodb://127.0.0.1:27017/gitportalDB";
+// const uri = "mongodb://127.0.0.1:27017/gitportalDB";
 
 
 database().catch(err => console.log(err));
@@ -87,12 +87,12 @@ app.get("/fund/user/:id", function(req,res){
 // UserCodeBase-------------------------------
 app.get("/", function(req,res){
 
-  setTimeout(function() {
-console.log("starting now");
-console.log(passwrdResetToken.create(32));
-//console.log(token);
-
-}, 10000);
+//   setTimeout(function() {
+// console.log("starting now");
+// console.log(passwrdResetToken.create(32));
+// //console.log(token);
+//
+// }, 10000);
 
   //console.log(User);
 console.log(Date.now());
@@ -102,7 +102,7 @@ console.log(dates.myDate());
 // sendingMails.emailSent("fagzy99@gmail.com", "LinkedUpNOW", "Check the arrival time");
 
 
-res.redirect("/login");
+res.redirect("/home");
 
 })
 

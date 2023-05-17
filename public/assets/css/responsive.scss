@@ -1,0 +1,2103 @@
+// Responsive CSS
+@media only screen and (max-width: 767px) {
+    // Default CSS
+    p {
+        font-size: 14px;
+    }
+    .ptb-100 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .pt-100 {
+        padding-top: 50px;
+    }
+    .pb-100 {
+        padding-bottom: 50px;
+    }
+    .pb-75 {
+        padding-bottom: 25px;
+    }
+    .default-btn {
+        font-size: 14px;
+    }
+    .optional-btn {
+        font-size: 14px;
+    }
+
+    // Section Title CSS
+    .section-title {
+        margin: 0 auto 30px;
+
+        span {
+            font-size: 14px;
+        }
+        h2 {
+            font-size: 22px;
+        }
+    }
+
+    // Main Banner Area CSS
+    .main-banner-area {
+        padding-top: 200px;
+        padding-bottom: 60px;
+
+        &::before {
+            display: none;
+        }
+        .container-fluid {
+            padding-right: var(--bs-gutter-x,.75rem);
+            padding-left: var(--bs-gutter-x,.75rem);
+            max-width: 540px;
+        }
+    }
+    .main-banner-content {
+        span {
+            font-size: 14px;
+        }
+        h1 {
+            font-size: 25px;
+        }
+        .banner-btn {
+            margin-top: 20px;
+        }
+        .trust-content {
+            top: 0;
+            margin-top: 25px;
+            display: flex;
+
+            li {
+                margin-bottom: 15px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                span {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    .main-banner-image {
+        top: 0;
+        text-align: center;
+        margin: {
+            top: 25px;
+            bottom: 25px;
+        };
+    }
+    .money-transfer-form {
+        .amount-currency-total-content {
+            border-radius: 10px 10px 0 0;
+            padding: 18px;
+
+            span {
+                font-size: 14px;
+            }
+            h3 {
+                font-size: 18px;
+            }
+        }
+        .money-transfer-content {
+            max-width: 100%;
+            padding: 20px 10px;
+
+            .form-group {
+                label {
+                    font-size: 12px;
+                }
+                .form-control {
+                    font-size: 15px;
+                }
+                .lock-icon {
+                    right: 110px;
+                }
+                .amount-currency-select {
+                    button {
+                        font-size: 12px;
+                        padding: 10px 28px 10px 10px;
+
+                        img {
+                            max-width: 15px;
+                            top: -1px;
+                        }
+                        &::before {
+                            font-size: 12px;
+                            right: 10px;
+                        }
+                    }
+                }
+            }
+            .amount-currency-info {
+                padding-left: 0;
+
+                &::before {
+                    left: 10px;
+                }
+                li {
+                    .info-icon {
+                        i {
+                            width: 20px;
+                            height: 20px;
+                            line-height: 20px;
+                            font-size: 14px;
+                        }
+                    }
+                    .info-left {
+                        b {
+                            font-size: 12px;
+                        }
+                        span {
+                            font-size: 12px;
+                        }
+                        strong {
+                            font-size: 12px;
+                        }
+                    }
+                    .info-right {
+                        padding-right: 28px;
+
+                        .amount-currency-select {
+                            button {
+                                font-size: 12px;
+                                padding: 10px 30px 10px 10px;
+                            }
+                            .currency-dropdown-menu {
+                                .dropdown-item {
+                                    font-size: 12px;
+                                    padding: 5px 20px;
+                                }
+                            }
+                        }
+                        span {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+            .amount-delivery-time {
+                margin: {
+                    top: 20px;
+                    bottom: 20px;
+                };
+                span {
+                    font-size: 14px;
+                }
+            }
+            .amount-btn-group {
+                li {
+                    margin-right: 10px;
+
+                    .default-btn {
+                        padding: 15px 20px;
+                    }
+                    .optional-btn {
+                        padding: 15px 20px;
+                    }
+                }
+            }
+        }
+    }
+    .main-banner-shape {
+        display: none;
+    }
+    .main-banner-shape-2 {
+        display: none;
+    }
+    .main-banner-area-wrap {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .main-banner-wrap-content {
+        span {
+            font-size: 14px;
+        }
+        h1 {
+            font-size: 25px;
+        }
+        .banner-btn-group {
+            .default-btn {
+                padding: 15px 20px;
+            }
+            .optional-btn {
+                padding: 15px 20px;
+            }
+        }
+    }
+    .main-banner-wrap-image {
+        margin-top: 25px;
+        text-align: center;
+    }
+
+    // Main Hero Area CSS
+    .main-hero-area {
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        .container-fluid {
+            padding-right: var(--bs-gutter-x,.75rem);
+            padding-left: var(--bs-gutter-x,.75rem);
+            max-width: 540px;
+        }
+    }
+    .main-hero-content {
+        span {
+            font-size: 14px;
+        }
+        h1 {
+            font-size: 25px;
+        }
+        .hero-btn {
+            margin-top: 20px;
+        }
+    }
+    .money-transfer-form-two {
+        padding: 0;
+        border: none;
+        margin-top: 25px;
+        
+        .money-transfer-content {
+            max-width: 100%;
+            padding: 20px 10px;
+
+            .form-group {
+                label {
+                    font-size: 12px;
+                }
+                .form-control {
+                    font-size: 15px;
+                }
+                .lock-icon {
+                    right: 110px;
+                }
+                .amount-currency-select {
+                    button {
+                        font-size: 12px;
+                        padding: 10px 28px 10px 10px;
+
+                        img {
+                            max-width: 15px;
+                            top: -1px;
+                        }
+                        &::before {
+                            font-size: 12px;
+                            right: 10px;
+                        }
+                    }
+                }
+            }
+            .amount-currency-info {
+                padding-left: 0;
+
+                &::before {
+                    left: 10px;
+                }
+                li {
+                    .info-icon {
+                        i {
+                            width: 20px;
+                            height: 20px;
+                            line-height: 20px;
+                            font-size: 14px;
+                        }
+                    }
+                    .info-left {
+                        b {
+                            font-size: 12px;
+                        }
+                        span {
+                            font-size: 12px;
+                        }
+                        strong {
+                            font-size: 12px;
+                        }
+                    }
+                    .info-right {
+                        padding-right: 28px;
+
+                        .amount-currency-select {
+                            button {
+                                font-size: 12px;
+                                padding: 10px 30px 10px 10px;
+                            }
+                            .currency-dropdown-menu {
+                                .dropdown-item {
+                                    font-size: 12px;
+                                    padding: 5px 20px;
+                                }
+                            }
+                        }
+                        span {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+            .amount-delivery-time {
+                margin: {
+                    top: 20px;
+                    bottom: 20px;
+                };
+                span {
+                    font-size: 14px;
+                }
+            }
+            .amount-btn-group {
+                li {
+                    margin-right: 10px;
+
+                    .default-btn {
+                        padding: 15px 20px;
+                    }
+                    .optional-btn {
+                        padding: 15px 20px;
+                    }
+                }
+            }
+        }
+    }
+    .main-hero-shape {
+        display: none;
+    }
+
+    // Getting Started Area CSS 
+    .single-getting-started-card {
+        padding: 20px;
+
+        h3 {
+            font-size: 18px;
+        }
+    }
+    .getting-started-content {
+        span {
+            font-size: 14px;
+        }
+        h3 {
+            font-size: 22px;
+        }
+    }
+    .getting-started-image {
+        margin-top: 25px;
+        text-align: center;
+    }
+    .getting-started-accordion {
+        .accordion-item {
+            .accordion-button {
+                font-size: var(--font-size);
+            }
+        }
+    }
+    
+    // Why Choose Us Area CSS 
+    .why-choose-us-content {
+        span {
+            font-size: 14px;
+        }
+        h3 {
+            font-size: 22px;
+        }
+        &.with-padding-left {
+            padding-left: 0;
+            margin-top: 25px;
+        }
+        .choose-us-list {
+            li {
+                font-size: 14px;
+            }
+        }
+    }
+    .why-choose-us-image {
+        margin-top: 25px;
+
+        .choose-image {
+            &.mb-25 {
+                margin-top: 25px;
+            }
+            img {
+                width: 100%;
+            }
+        }
+        .choose-shape {
+            display: none;
+        }
+    }
+
+    // Compare Pricing Area CSS
+    .compare-pricing-table {
+        table tbody {
+            tr {
+                td {
+                    b {
+                        font-size: var(--font-size);
+                    }
+                }
+            }
+        }
+    }
+
+    // Security Area CSS
+    .security-image {
+        .security-wrap {
+            &.mb-25 {
+                margin-top: 25px;
+            }
+        }
+    }
+    .security-content {
+        padding-left: 0;
+        margin-top: 25px;
+
+        span {
+            font-size: 14px;
+        }
+        h3 {
+            font-size: 22px;
+        }
+    }
+
+    // Features Area CSS
+    .features-area {
+        padding-bottom: 50px;
+    }
+    .features-content {
+        span {
+            font-size: 14px;
+        }
+        h3 {
+            font-size: 22px;
+        }
+    }
+    .single-features-card {
+        padding: 20px;
+
+        .content {
+            h3 {
+                font-size: 18px;
+            }
+            .list {
+                li {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .features-vector-image {
+        margin-top: 25px;
+        text-align: center;
+
+        img {
+            animation: unset;
+        }
+    }
+    .features-content-wrap {
+        padding-left: 0;
+        margin-top: 25px;
+
+        span {
+            font-size: 14px;
+        }
+        h3 {
+            font-size: 22px;
+        }
+    }
+    .single-features-box {
+        padding-left: 50px;
+
+        .icon {
+            i {
+                font-size: 35px;
+            }
+        }
+        h3 {
+            font-size: 18px;
+        }
+        .list {
+            li {
+                font-size: 14px;
+            }
+        }
+    }
+
+    // Review Area CSS
+    .single-review-box {
+        padding: 20px;
+    }
+    .single-review-card {
+        .reviewquote-image {
+            display: none;
+        }
+    }
+    .review-shape-2 {
+        display: none;
+    }
+
+    // Overview Area CSS
+    .overview-content {
+        span {
+            font-size: 14px;
+        }
+        h3 {
+            font-size: 22px;
+        }
+        .overview-btn-group {
+            li {
+                margin-right: 10px;
+
+                .default-btn {
+                    padding: 12px 10px;
+                }
+                .optional-btn {
+                    padding: 12px 10px;
+                }
+            }
+        }
+    }
+    .overview-shape-2 {
+        display: none;
+    }
+
+    // FAQ Area CSS
+    .faq-item {
+        padding-left: 0;
+        margin-top: 25px;
+
+        .faq-content {
+            span {
+                font-size: 14px;
+            }
+            h3 {
+                font-size: 22px;
+            }
+        }
+    }
+    .faq-accordion {
+        .accordion-item {
+            .accordion-button {
+                font-size: var(--font-size);
+                padding: 15px 40px 15px 15px;
+
+                &::before {
+                    right: 12px;
+                }
+            }
+            .accordion-body {
+                padding: 0 15px 15px;
+            }
+        }
+        &.mb-25 {
+            margin: {
+                bottom: 25px;
+            };
+        }
+    }
+
+    // Global Transfers Area CSS
+    .single-global-transfers-card {
+        .icon {
+            i {
+                font-size: 50px;
+            }
+        }
+    }
+
+    // Benefits Area CSS
+    .single-benefits-card {
+        padding: 20px;
+
+        .benefits-content {
+            padding-left: 0;
+
+            .benefits-image {
+                position: relative;
+                margin-bottom: 35px;
+            }
+            h3 {
+                font-size: 18px;
+            }
+        }
+    }
+
+    // Reliable Area CSS
+    .reliable-content {
+        margin-top: 25px;
+
+        span {
+            font-size: 14px;
+        }
+        h3 {
+            font-size: 22px;
+        }
+        &.with-padding-left {
+            padding-left: 0;
+        }
+        .reliable-list {
+            li {
+                font-size: 14px;
+            }
+        }
+    }
+    .reliable-image-wrap {
+        .wrap-image {
+            &.mb-25 {
+                margin: {
+                    top: 25px;
+                };
+            }
+        }
+        .reliable-shape {
+            display: none;
+        }
+    }
+
+    // Paiement Area CSS
+    .paiement-content {
+        padding-right: 0;
+
+        span {
+            font-size: 14px;
+        }
+        h3 {
+            font-size: 22px;
+        }
+        .paiement-list {
+            li {
+                font-size: 14px;
+            }
+        }
+    }
+    .paiement-image {
+        margin-top: 25px;
+    }
+
+    // Pricing Area CSS
+    .single-pricing-table {
+        .pricing-header {
+            h3 {
+                font-size: 20px;
+            }
+        }
+        .price {
+            font-size: 35px;
+        }
+        .features-list {
+            li {
+                font-size: 14px;
+            }
+        }
+    }
+    
+    // App Area CSS
+    .app-content {
+        span {
+            font-size: 14px;
+        }
+        h3 {
+            font-size: 22px;
+        }
+        .app-btn-box {
+            .appstore-btn {
+                margin-bottom: 10px;
+                padding: {
+                    left: 40px;
+                    right: 10px;
+                    top: 10px;
+                    bottom: 10px;
+                };
+                i {
+                    font-size: 18px;
+                    left: 10px;
+                }
+                span {
+                    font-size: 15px;
+                }
+            }
+            .google-btn {
+                margin-bottom: 10px;
+                padding: {
+                    left: 40px;
+                    right: 10px;
+                    top: 10px;
+                    bottom: 10px;
+                };
+                i {
+                    font-size: 18px;
+                    left: 10px;
+                }
+                span {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+    .app-image {
+        margin-top: 30px;
+
+        .circle-pattern {
+            width: 270px;
+            height: 315px;
+        }
+    }
+
+    // Blog Area CSS
+    .single-blog-card {
+        .blog-content {
+            padding: 20px;
+
+            h3 {
+                font-size: 20px;
+            }
+            .blog-btn {
+                font-size: 14px;
+            }
+        }
+    }
+
+    // Page Banner Area CSS
+    .page-banner-content {
+        h2 {
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+    }
+    .page-banner-image {
+        text-align: center;
+        margin-top: 30px;
+
+        img {
+            animation: unset;
+        }
+    }
+    .help-center-box {
+        h3 {
+            font-size: 20px;
+        }
+        .search-form {
+            margin: {
+                top: 20px;
+            };
+        }
+        .help-image {
+            img {
+                animation: unset;
+            }
+        }
+    }
+
+    // Partner Area CSS 
+    .partner-title {
+        margin-bottom: 30px;
+
+        h3 {
+            font-size: 18px;
+        }
+    }
+
+    // Funfact Area CSS
+    .single-funfact-box {
+        padding: 20px;
+
+        h3 {
+            font-size: 25px;
+
+            .small-text {
+                font-size: 20px;
+            }
+        }
+    }
+
+    // Login Area CSS
+    .login-form {
+        padding: 20px;
+
+        h2 {
+            font-size: 20px;
+        }
+        form {
+            .lost-your-password-wrap {
+                text-align: start;
+                margin-top: 10px;
+            }
+        }
+    }
+
+    // Register Area CSS
+    .register-form {
+        padding: 20px;
+
+        h2 {
+            font-size: 20px;
+        }
+    }
+
+    // Forgot Password Area CSS
+    .forgot-password-form {
+        padding: 20px;
+
+        h2 {
+            font-size: 20px;
+        }
+    }
+
+    // Terms of Service Area CSS 
+    .terms-of-service-content {
+        h3 {
+            font-size: 20px;
+        }
+    }
+
+    // Privacy Policy Area CSS
+    .privacy-policy-content {
+        h3 {
+            font-size: 20px;
+        }
+    }
+
+    // 404 Error Area CSS
+    .error-content {
+        h3 {
+            font-size: 20px;
+        }
+    }
+
+    // Coming Soon Area CSS
+    .coming-soon-area {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    .coming-soon-content {
+        padding: 30px 25px;
+
+        #timer {
+            margin-top: 20px;
+
+            div {
+                width: 100px;
+                height: 105px;
+                margin-left: 5px;
+                margin-right: 5px;
+                font-size: 20px;
+                margin-top: 10px;
+            }
+        }
+        h2 {
+            font-size: 22px;
+        }
+    }
+
+    // Explore Area CSS
+    .single-explore-card {
+        padding: 20px;
+
+        .explore-content {
+            padding-left: 0;
+
+            .explore-image {
+                position: relative;
+                margin-bottom: 35px;
+            }
+            h3 {
+                font-size: 18px;
+            }
+        }
+    }
+
+    // Blog Details Area CSS
+    .blog-details-desc {
+        h3 {
+            font-size: 20px;
+        }
+        .article-info-item {
+            &.d-flex {
+                display: block !important;
+            }
+            .info-social {
+                margin-top: 20px;
+            }
+        }
+        .article-content {
+            h3 {
+                font-size: 20px;
+            }
+            h4 {
+                font-size: 20px;
+            }
+            .quote-content {
+                span {
+                    font-size: 15px;
+                }
+            }
+        }
+        .article-leave-comment {
+            h3 {
+                font-size: 20px;
+            }
+        }
+    }
+
+    // Global Transfers Area
+    .single-global-transfers-card {
+        padding: 20px;
+
+        .global-btn {
+            font-size: 14px;
+        }
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    // Why Choose Us Area CSS 
+    .why-choose-us-image {
+        .choose-image {
+            &.mb-25 {
+                margin-top: 0;
+            }
+        }
+    }
+
+    // Security Area CSS
+    .security-image {
+        .security-wrap {
+            &.mb-25 {
+                margin-top: 0;
+            }
+        }
+    }
+
+    // Reliable Area CSS
+    .reliable-image-wrap {
+        .wrap-image {
+            &.mb-25 {
+                margin: {
+                    top: 0;
+                };
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    // Default CSS
+    .ptb-100 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .pt-100 {
+        padding-top: 50px;
+    }
+    .pb-100 {
+        padding-bottom: 50px;
+    }
+    .pb-75 {
+        padding-bottom: 25px;
+    }
+    .default-btn {
+        font-size: 14px;
+    }
+    .optional-btn {
+        font-size: 14px;
+    }
+
+    // Section Title CSS
+    .section-title {
+        margin: 0 auto 30px;
+        
+        h2 {
+            font-size: 25px;
+        }
+    }
+
+    // Main Banner Area CSS
+    .main-banner-area {
+        padding-top: 200px;
+        padding-bottom: 60px;
+
+        &::before {
+            display: none;
+        }
+        .container-fluid {
+            padding-right: var(--bs-gutter-x,.75rem);
+            padding-left: var(--bs-gutter-x,.75rem);
+            max-width: 720px;
+        }
+    }
+    .main-banner-content {
+        h1 {
+            font-size: 35px;
+        }
+        .banner-btn {
+            margin-top: 20px;
+        }
+        .trust-content {
+            top: 0;
+            margin-top: 25px;
+        }
+    }
+    .main-banner-image {
+        top: 0;
+        text-align: center;
+        margin: {
+            top: 25px;
+            bottom: 25px;
+        };
+    }
+    .money-transfer-form {
+        .amount-currency-total-content {
+            border-radius: 10px 10px 0 0;
+            padding: 18px;
+            
+            h3 {
+                font-size: 20px;
+            }
+        }
+        .money-transfer-content {
+            max-width: 100%;
+
+            .amount-currency-info {
+                li {
+                    .info-right {
+                        .amount-currency-select {
+                            .currency-dropdown-menu {
+                                .dropdown-item {
+                                    padding: 5px 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .main-banner-shape {
+        display: none;
+    }
+    .main-banner-shape-2 {
+        display: none;
+    }
+    .main-banner-area-wrap {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .main-banner-wrap-content {
+        h1 {
+            font-size: 35px;
+        }
+    }
+    .main-banner-wrap-image {
+        margin-top: 25px;
+        text-align: center;
+    }
+
+    // Main Hero Area CSS
+    .main-hero-area {
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        .container-fluid {
+            padding-right: var(--bs-gutter-x,.75rem);
+            padding-left: var(--bs-gutter-x,.75rem);
+            max-width: 720px;
+        }
+    }
+    .main-hero-content {
+        h1 {
+            font-size: 35px;
+        }
+    }
+    .money-transfer-form-two {
+        margin-top: 25px;
+    }
+
+    // Getting Started Area CSS 
+    .single-getting-started-card {
+        padding: 20px;
+
+        h3 {
+            font-size: 18px;
+        }
+    }
+    .getting-started-content {
+        span {
+            font-size: 14px;
+        }
+        h3 {
+            font-size: 22px;
+        }
+    }
+    .getting-started-image {
+        margin-top: 25px;
+        text-align: center;
+    }
+    .getting-started-accordion {
+        .accordion-item {
+            .accordion-button {
+                font-size: var(--font-size);
+            }
+        }
+    }
+    
+    // Why Choose Us Area CSS 
+    .why-choose-us-content {
+        h3 {
+            font-size: 25px;
+        }
+        &.with-padding-left {
+            padding-left: 0;
+            margin-top: 25px;
+        }
+    }
+    .why-choose-us-image {
+        margin-top: 25px;
+
+        .choose-shape {
+            display: none;
+        }
+    }
+
+    // Compare Pricing Area CSS
+    .compare-pricing-table {
+        table tbody {
+            tr {
+                td {
+                    b {
+                        font-size: var(--font-size);
+                    }
+                }
+            }
+        }
+    }
+
+    // Security Area CSS
+    .security-content {
+        padding-left: 0;
+        margin-top: 25px;
+        
+        h3 {
+            font-size: 25px;
+        }
+    }
+
+    // Features Area CSS
+    .features-area {
+        padding-bottom: 50px;
+    }
+    .features-content {
+        h3 {
+            font-size: 25px;
+        }
+    }
+    .single-features-card {
+        padding: 20px;
+
+        .content {
+            h3 {
+                font-size: 18px;
+            }
+        }
+    }
+    .features-vector-image {
+        margin-top: 25px;
+        text-align: center;
+
+        img {
+            animation: unset;
+        }
+    }
+    .features-content-wrap {
+        padding-left: 0;
+        margin-top: 25px;
+        
+        h3 {
+            font-size: 25px;
+        }
+    }
+    .single-features-box {
+        padding-left: 50px;
+
+        .icon {
+            i {
+                font-size: 35px;
+            }
+        }
+        h3 {
+            font-size: 18px;
+        }
+    }
+
+    // Review Area CSS
+    .single-review-box {
+        padding: 20px;
+    }
+
+    // Overview Area CSS
+    .overview-content {
+        h3 {
+            font-size: 25px;
+        }
+        .overview-btn-group {
+            li {
+                margin-right: 10px;
+
+                .default-btn {
+                    padding: 15px 10px;
+                }
+                .optional-btn {
+                    padding: 15px 10px;
+                }
+            }
+        }
+    }
+    .overview-shape-2 {
+        display: none;
+    }
+
+    // FAQ Area CSS
+    .faq-item {
+        padding-left: 0;
+        margin-top: 25px;
+
+        .faq-content {
+            h3 {
+                font-size: 25px;
+            }
+        }
+    }
+    .faq-accordion {
+        .accordion-item {
+            .accordion-button {
+                font-size: var(--font-size);
+            }
+        }
+        &.mb-25 {
+            margin: {
+                bottom: 25px;
+            };
+        }
+    }
+
+    // Global Transfers Area CSS
+    .single-global-transfers-card {
+        .icon {
+            i {
+                font-size: 50px;
+            }
+        }
+    }
+
+    // Benefits Area CSS
+    .single-benefits-card {
+        padding: 20px;
+
+        .benefits-content {
+            padding-left: 0;
+
+            .benefits-image {
+                position: relative;
+                margin-bottom: 35px;
+            }
+            h3 {
+                font-size: 20px;
+            }
+        }
+    }
+
+    // Reliable Area CSS
+    .reliable-content {
+        margin-top: 25px;
+        
+        h3 {
+            font-size: 25px;
+        }
+        &.with-padding-left {
+            padding-left: 0;
+        }
+    }
+
+    // Paiement Area CSS
+    .paiement-content {
+        padding-right: 0;
+        
+        h3 {
+            font-size: 25px;
+        }
+    }
+    .paiement-image {
+        margin-top: 25px;
+    }
+
+    // Pricing Area CSS
+    .single-pricing-table {
+        .pricing-header {
+            h3 {
+                font-size: 20px;
+            }
+        }
+        .price {
+            font-size: 35px;
+        }
+    }
+    
+    // App Area CSS
+    .app-content {
+        h3 {
+            font-size: 25px;
+        }
+    }
+    .app-image {
+        margin-top: 30px;
+    }
+
+    // Blog Area CSS
+    .single-blog-card {
+        .blog-content {
+            padding: 20px;
+
+            h3 {
+                font-size: 20px;
+            }
+        }
+    }
+
+    // Page Banner Area CSS
+    .page-banner-content {
+        h2 {
+            font-size: 32px;
+        }
+    }
+    .page-banner-image {
+        img {
+            animation: unset;
+        }
+    }
+    .help-center-box {
+        h3 {
+            font-size: 30px;
+        }
+    }
+
+    // Funfact Area CSS
+    .single-funfact-box {
+        padding: 20px;
+
+        h3 {
+            font-size: 35px;
+
+            .small-text {
+                font-size: 30px;
+            }
+        }
+    }
+
+    // Explore Area CSS
+    .single-explore-card {
+        padding: 20px;
+
+        .explore-content {
+            padding-left: 0;
+
+            .explore-image {
+                position: relative;
+                margin-bottom: 35px;
+            }
+            h3 {
+                font-size: 18px;
+            }
+        }
+    }
+
+    // Blog Details Area CSS
+    .blog-details-desc {
+        h3 {
+            font-size: 25px;
+        }
+        .article-content {
+            h3 {
+                font-size: 22px;
+            }
+            h4 {
+                font-size: 22px;
+            }
+            .quote-content {
+                span {
+                    font-size: 15px;
+                }
+            }
+        }
+        .article-leave-comment {
+            h3 {
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    // Main Banner Area CSS
+    .main-banner-area {
+        padding: {
+            top: 175px;
+            bottom: 65px;
+        };
+        .container-fluid {
+            padding-right: var(--bs-gutter-x,.75rem);
+            padding-left: var(--bs-gutter-x,.75rem);
+            max-width: 960px;
+        }
+    }
+    .main-banner-content {
+        span {
+            font-size: 15px;
+        }
+        h1 {
+            font-size: 40px;
+        }
+        p {
+            font-size: 15px;
+        }
+        .banner-btn {
+            margin-top: 20px;
+        }
+        .trust-content {
+            top: 0;
+            margin-top: 25px;
+
+            li {
+                margin-right: 15px;
+
+                span {
+                    font-size: 13px;
+                }
+                img {
+                    max-width: 50px;
+                }
+            }
+        }
+    }
+    .main-banner-image {
+        top: 85px;
+    }
+    .money-transfer-form {
+        .amount-currency-total-content {
+            border-radius: 10px 10px 0 0;
+            padding: 18px;
+
+            span {
+                font-size: 14px;
+            }
+            h3 {
+                font-size: 18px;
+            }
+        }
+        .money-transfer-content {
+            max-width: 100%;
+            padding: 20px 10px;
+
+            .form-group {
+                label {
+                    font-size: 12px;
+                }
+                .form-control {
+                    font-size: 15px;
+                }
+                .lock-icon {
+                    right: 110px;
+                }
+                .amount-currency-select {
+                    button {
+                        font-size: 12px;
+                        padding: 10px 28px 10px 10px;
+
+                        img {
+                            max-width: 15px;
+                            top: -1px;
+                        }
+                        &::before {
+                            font-size: 12px;
+                            right: 10px;
+                        }
+                    }
+                }
+            }
+            .amount-currency-info {
+                padding-left: 0;
+
+                &::before {
+                    left: 10px;
+                }
+                li {
+                    .info-icon {
+                        i {
+                            width: 20px;
+                            height: 20px;
+                            line-height: 20px;
+                            font-size: 14px;
+                        }
+                    }
+                    .info-left {
+                        b {
+                            font-size: 12px;
+                        }
+                        span {
+                            font-size: 12px;
+                        }
+                        strong {
+                            font-size: 12px;
+                        }
+                    }
+                    .info-right {
+                        padding-right: 28px;
+
+                        .amount-currency-select {
+                            button {
+                                font-size: 12px;
+                                padding: 10px 30px 10px 10px;
+                            }
+                            .currency-dropdown-menu {
+                                .dropdown-item {
+                                    font-size: 12px;
+                                    padding: 5px 20px;
+                                }
+                            }
+                        }
+                        span {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+            .amount-delivery-time {
+                margin: {
+                    top: 20px;
+                    bottom: 20px;
+                };
+                span {
+                    font-size: 14px;
+                }
+            }
+            .amount-btn-group {
+                li {
+                    margin-right: 10px;
+
+                    .default-btn {
+                        padding: 15px 10px;
+                        font-size: 14px;
+                    }
+                    .optional-btn {
+                        padding: 15px 10px;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    // Main Hero Area CSS
+    .main-hero-area {
+        .container-fluid {
+            padding-right: var(--bs-gutter-x,.75rem);
+            padding-left: var(--bs-gutter-x,.75rem);
+            max-width: 960px;
+        }
+    }
+    .main-hero-content {
+        h1 {
+            font-size: 50px;
+        }
+    }
+    .money-transfer-form-two {
+        padding: 0;
+        border: none;
+        margin-top: 25px;
+        
+        .money-transfer-content {
+            max-width: 100%;
+            padding: 20px 10px;
+
+            .form-group {
+                label {
+                    font-size: 12px;
+                }
+                .form-control {
+                    font-size: 15px;
+                }
+                .lock-icon {
+                    right: 110px;
+                }
+                .amount-currency-select {
+                    button {
+                        font-size: 12px;
+                        padding: 10px 28px 10px 10px;
+
+                        img {
+                            max-width: 15px;
+                            top: -1px;
+                        }
+                        &::before {
+                            font-size: 12px;
+                            right: 10px;
+                        }
+                    }
+                }
+            }
+            .amount-currency-info {
+                padding-left: 0;
+
+                &::before {
+                    left: 10px;
+                }
+                li {
+                    .info-icon {
+                        i {
+                            width: 20px;
+                            height: 20px;
+                            line-height: 20px;
+                            font-size: 14px;
+                        }
+                    }
+                    .info-left {
+                        b {
+                            font-size: 12px;
+                        }
+                        span {
+                            font-size: 12px;
+                        }
+                        strong {
+                            font-size: 12px;
+                        }
+                    }
+                    .info-right {
+                        padding-right: 28px;
+
+                        .amount-currency-select {
+                            button {
+                                font-size: 12px;
+                                padding: 10px 30px 10px 10px;
+                            }
+                            .currency-dropdown-menu {
+                                .dropdown-item {
+                                    font-size: 12px;
+                                    padding: 5px 20px;
+                                }
+                            }
+                        }
+                        span {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+            .amount-delivery-time {
+                margin: {
+                    top: 20px;
+                    bottom: 20px;
+                };
+                span {
+                    font-size: 14px;
+                }
+            }
+            .amount-btn-group {
+                li {
+                    margin-right: 10px;
+
+                    .default-btn {
+                        padding: 15px;
+                    }
+                    .optional-btn {
+                        padding: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    // Getting Started Area CSS 
+    .single-getting-started-card {
+        padding: 20px;
+
+        h3 {
+            font-size: 18px;
+        }
+    }
+
+    // Features Area CSS
+    .features-vector-image {
+        img {
+            animation: unset;
+        }
+    }
+    .single-features-box {
+        padding-left: 45px;
+        
+        .icon {
+            i {
+                font-size: 30px;
+            }
+        }
+        h3 {
+            font-size: 18px;
+        }
+        .list {
+            li {
+                line-height: 25px;
+                font-size: 14px;
+                padding-left: 20px;
+
+                i {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    // Coverage Area CSS
+    .single-coverage-card {
+        padding: 20px;
+
+        .content {
+            h3 {
+                font-size: var(--font-size);
+            }
+        }
+    }
+
+    // App Area CSS
+    .app-image {
+        .circle-pattern {
+            width: 450px;
+            height: 450px;
+        }
+    }
+
+    // Contact Information Area CSS
+    .contact-information-card {
+        padding: 20px;
+    }
+
+    // Team Area CSS
+    .single-team-card {
+        .team-image {
+            .social {
+                li {
+                    a {
+                        i {
+                            width: 25px;
+                            height: 25px;
+                            line-height: 25px;
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+    // Main Banner Area CSS
+    .main-banner-area {
+        padding: {
+            bottom: 70px;
+        };
+    }
+    .main-banner-content {
+        span {
+            font-size: 15px;
+        }
+        h1 {
+            font-size: 40px;
+        }
+        p {
+            font-size: 15px;
+        }
+        .banner-btn {
+            margin-top: 20px;
+        }
+        .trust-content {
+            top: 0;
+            margin-top: 25px;
+
+            li {
+                margin-right: 15px;
+
+                span {
+                    font-size: 13px;
+                }
+                img {
+                    max-width: 50px;
+                }
+            }
+        }
+    }
+    .money-transfer-form {
+        .amount-currency-total-content {
+            border-radius: 10px 10px 0 0;
+            padding: 18px;
+
+            span {
+                font-size: 14px;
+            }
+            h3 {
+                font-size: 18px;
+            }
+        }
+        .money-transfer-content {
+            max-width: 100%;
+            padding: 20px 10px;
+
+            .form-group {
+                label {
+                    font-size: 14px;
+                }
+                .form-control {
+                    font-size: 18px;
+                }
+                .lock-icon {
+                    right: 110px;
+                }
+                .amount-currency-select {
+                    button {
+                        font-size: 14px;
+                        padding: 10px 28px 10px 10px;
+
+                        img {
+                            max-width: 15px;
+                            top: -1px;
+                        }
+                        &::before {
+                            font-size: 14px;
+                            right: 10px;
+                        }
+                    }
+                }
+            }
+            .amount-currency-info {
+                padding-left: 0;
+
+                &::before {
+                    left: 10px;
+                }
+                li {
+                    .info-icon {
+                        i {
+                            width: 20px;
+                            height: 20px;
+                            line-height: 20px;
+                            font-size: 14px;
+                        }
+                    }
+                    .info-left {
+                        b {
+                            font-size: 14px;
+                        }
+                        span {
+                            font-size: 14px;
+                        }
+                        strong {
+                            font-size: 14px;
+                        }
+                    }
+                    .info-right {
+                        padding-right: 28px;
+
+                        .amount-currency-select {
+                            button {
+                                font-size: 14px;
+                                padding: 10px 30px 10px 10px;
+                            }
+                            .currency-dropdown-menu {
+                                .dropdown-item {
+                                    font-size: 14px;
+                                    padding: 5px 20px;
+                                }
+                            }
+                        }
+                        span {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+            .amount-delivery-time {
+                margin: {
+                    top: 20px;
+                    bottom: 20px;
+                };
+                span {
+                    font-size: 14px;
+                }
+            }
+            .amount-btn-group {
+                li {
+                    margin-right: 10px;
+
+                    .default-btn {
+                        padding: 15px 18px;
+                        font-size: 14px;
+                    }
+                    .optional-btn {
+                        padding: 15px 18px;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    // Getting Started Area CSS 
+    .single-getting-started-card {
+        padding: 20px;
+
+        h3 {
+            font-size: 18px;
+        }
+    }
+
+    // Main Hero Area CSS
+    .money-transfer-form-two {
+        padding: 0;
+        border: none;
+        margin-top: 25px;
+        
+        .money-transfer-content {
+            max-width: 100%;
+            padding: 20px 10px;
+
+            .form-group {
+                label {
+                    font-size: 14px;
+                }
+                .form-control {
+                    font-size: 18px;
+                }
+                .lock-icon {
+                    right: 110px;
+                }
+                .amount-currency-select {
+                    button {
+                        font-size: 14px;
+                        padding: 10px 28px 10px 10px;
+
+                        img {
+                            max-width: 15px;
+                            top: -1px;
+                        }
+                        &::before {
+                            font-size: 14px;
+                            right: 10px;
+                        }
+                    }
+                }
+            }
+            .amount-currency-info {
+                padding-left: 0;
+
+                &::before {
+                    left: 10px;
+                }
+                li {
+                    .info-icon {
+                        i {
+                            width: 20px;
+                            height: 20px;
+                            line-height: 20px;
+                            font-size: 14px;
+                        }
+                    }
+                    .info-left {
+                        b {
+                            font-size: 14px;
+                        }
+                        span {
+                            font-size: 14px;
+                        }
+                        strong {
+                            font-size: 14px;
+                        }
+                    }
+                    .info-right {
+                        padding-right: 28px;
+
+                        .amount-currency-select {
+                            button {
+                                font-size: 14px;
+                                padding: 10px 30px 10px 10px;
+                            }
+                            .currency-dropdown-menu {
+                                .dropdown-item {
+                                    font-size: 14px;
+                                    padding: 5px 20px;
+                                }
+                            }
+                        }
+                        span {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+            .amount-delivery-time {
+                margin: {
+                    top: 20px;
+                    bottom: 20px;
+                };
+                span {
+                    font-size: 14px;
+                }
+            }
+            .amount-btn-group {
+                li {
+                    margin-right: 10px;
+
+                    .default-btn {
+                        padding: 15px 18px;
+                        font-size: 14px;
+                    }
+                    .optional-btn {
+                        padding: 15px 18px;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 1449px) {
+
+}
+
+@media only screen and (min-width: 1550px) {
+    // Main Banner Area CSS
+    .main-banner-area {
+        .container-fluid {
+            padding: {
+                left: 100px;
+                right: 100px;
+            };
+        }
+    }
+    .money-transfer-form {
+        .money-transfer-content {
+            max-width: 515px;
+            margin: auto;
+        }
+    }
+
+    // Main Hero Area CSS
+    .main-hero-area {
+        padding: {
+            top: 130px;
+            bottom: 130px;
+        };
+        .container-fluid {
+            padding: {
+                left: 100px;
+                right: 100px;
+            };
+        }
+    }
+
+    // Coming Soon Area CSS
+    .coming-soon-area {
+        padding-top: 220px;
+        padding-bottom: 220px;
+    }
+}

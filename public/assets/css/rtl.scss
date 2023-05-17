@@ -1,0 +1,1392 @@
+.ms-auto {
+    margin: {
+        right: auto !important;
+        left: unset !important;
+    };
+}
+.topbar-information {
+    padding: {
+        right: 0;
+    };
+    li {
+        margin: {
+            left: 20px;
+            right: 0;
+        };
+        &:last-child {
+            margin: {
+                left: 0;
+            };
+        }
+        &::before {
+            left: -14px;
+            right: auto;
+        }
+    }
+}
+.topbar-action {
+    li {
+        margin: {
+            left: 20px;
+            right: 0;
+        };
+        &:last-child {
+            margin: {
+                left: 0;
+            };
+        }
+        &::before {
+            left: -14px;
+            right: auto;
+        }
+    }
+}
+.language-option {
+    button {
+        padding: {
+            left: 22px;
+            right: 22px;
+        };
+        i {
+            position: absolute;
+            right: 0;
+            margin: {
+                left: 5px;
+                right: 0;
+            };
+        }
+        &::before {
+            left: 0;
+            right: auto;
+            top: -1px;
+        }
+    }
+    .dropdown-menu[style] {
+        left: 0 !important;
+        right: auto !important;
+    }    
+    .language-dropdown-menu {
+        .dropdown-item {
+            img {
+                margin: {
+                    left: 10px;
+                    right: 0;
+                };
+            }
+        }
+    }
+}
+.main-navbar {
+    .navbar {
+        ul {
+            padding: {
+                right: 0;
+            };
+        }
+        .navbar-list {
+            ul {
+                li {
+                    margin: {
+                        left: 20px;
+                        right: 0;
+                    };
+                    &:last-child {
+                        margin-left: 0;
+                    }
+                    &::before {
+                        left: -14px;
+                        right: auto;
+                    }
+                }
+            }
+        }
+        .navbar-brand {
+            padding: 0 0 0 30px;
+            margin: {
+                right: 0;
+            };
+        }
+        .navbar-nav {
+            .nav-item {
+                &:first-child {
+                    margin: {
+                        left: 15px;
+                        right: 0;
+                    };
+                }
+                &:last-child {
+                    margin: {
+                        right: 15px;
+                        left: 0;
+                    };
+                }
+                .dropdown-menu {
+                    right: 0;
+                    left: auto;
+                    text-align: right;
+
+                    li {
+                        a {
+                            i {
+                                left: 15px;
+                                right: auto;
+                            }
+                        }
+                        .dropdown-menu {
+                            left: -250px;
+                            right: auto;
+                        }
+                    }
+                }
+            }
+        }
+        .others-options {
+            margin: {
+                right: 30px;
+                left: 0;
+            };
+            .option-item {
+                margin: {
+                    left: 20px;
+                    right: 0;
+                };
+                &:last-child {
+                    margin: {
+                        left: 0;
+                    };
+                }
+            }
+        }
+    }
+}
+.main-banner-content {
+    span {
+        &::before {
+            left: -55px;
+            right: auto;
+        }
+    }
+    .trust-content {
+        padding-right: 0;
+
+        li {
+            margin: {
+                left: 30px;
+                right: 0;
+            };
+            &:last-child {
+                margin-left: 0;
+            }
+        }
+    }
+}
+.main-banner-shape-2 {
+    left: 30%;
+    right: auto;
+    transform: translateX(30%);
+}
+.money-transfer-form {
+    .money-transfer-content {
+        .form-group {
+            label {
+                right: 24px;
+                left: auto;
+            }
+            .form-control {
+                padding-right: 0;
+                padding-left: 135px;
+            }
+            .amount-currency-select {
+                left: 0;
+                right: auto;
+
+                button {
+                    padding: 15px 15px 15px 40px;
+                    border-radius: 10px 0 0 10px;
+
+                    &::before {
+                        left: 15px;
+                        right: auto;
+                    }
+                    img {
+                        margin: {
+                            left: 5px;
+                            right: auto;
+                        };
+                    }
+                }
+                .dropdown-menu[style] {
+                    left: 0 !important;
+                    right: auto !important;
+                }
+                .currency-dropdown-menu {
+                    .dropdown-item {
+                        img {
+                            margin: {
+                                left: 10px;
+                                right: 0;
+                            };
+                        }
+                    }
+                }
+            }
+            .lock-icon {
+                left: 130px;
+                right: auto;
+            }
+        }
+        .amount-currency-info {
+            padding: {
+                right: 20px;
+                left: 0;
+            };
+            &::before {
+                right: 35px;
+                left: auto;
+            }
+            li {
+                .info-right {
+                    padding: {
+                        left: 35px;
+                        right: 0;
+                    };
+                    .fee-text {
+                        left: 0;
+                        right: auto;
+                    }
+                    .amount-currency-select {
+                        button {
+                            padding: 10px 10px 10px 40px;
+
+                            &::before {
+                                left: 10px;
+                                right: auto;
+                            }
+                        }
+                    }
+                }
+                .info-left {
+                    strong {
+                        i {
+                            margin-right: 5px;
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .amount-btn-group {
+            padding: {
+                right: 0;
+            };
+            li {
+                margin: {
+                    left: 20px;
+                    right: 0;
+                };
+                &:last-child {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+.main-hero-content {
+    span {
+        padding: 5px 40px 5px 15px;
+
+        i {
+            right: 15px;
+            left: auto;
+        }
+    }
+}
+.money-transfer-form-two {
+    .money-transfer-content {
+        .form-group {
+            label {
+                right: 24px;
+                left: auto;
+            }
+            .form-control {
+                padding-right: 0;
+                padding-left: 135px;
+            }
+            .amount-currency-select {
+                left: 0;
+                right: auto;
+
+                button {
+                    padding: 15px 15px 15px 40px;
+                    border-radius: 10px 0 0 10px;
+
+                    &::before {
+                        left: 15px;
+                        right: auto;
+                    }
+                    img {
+                        margin: {
+                            left: 5px;
+                            right: auto;
+                        };
+                    }
+                }
+                .dropdown-menu[style] {
+                    left: 0 !important;
+                    right: auto !important;
+                }
+                .currency-dropdown-menu {
+                    .dropdown-item {
+                        img {
+                            margin: {
+                                left: 10px;
+                                right: 0;
+                            };
+                        }
+                    }
+                }
+            }
+            .lock-icon {
+                left: 130px;
+                right: auto;
+            }
+        }
+        .amount-currency-info {
+            padding: {
+                right: 20px;
+                left: 0;
+            };
+            &::before {
+                right: 35px;
+                left: auto;
+            }
+            li {
+                .info-right {
+                    padding: {
+                        left: 35px;
+                        right: 0;
+                    };
+                    .fee-text {
+                        left: 0;
+                        right: auto;
+                    }
+                    .amount-currency-select {
+                        button {
+                            padding: 10px 10px 10px 40px;
+
+                            &::before {
+                                left: 10px;
+                                right: auto;
+                            }
+                        }
+                    }
+                }
+                .info-left {
+                    strong {
+                        i {
+                            margin-right: 5px;
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .amount-btn-group {
+            padding: {
+                right: 0;
+            };
+            li {
+                margin: {
+                    left: 20px;
+                    right: 0;
+                };
+                &:last-child {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+.main-hero-shape {
+    left: 30%;
+    right: auto;
+    transform: translateX(30%);
+}
+.main-hero-shape-2 {
+    left: 5%;
+    right: auto;
+    transform: translateX(5%);
+}
+.why-choose-us-content {
+    .choose-us-list {
+        padding-right: 0;
+
+        li {
+            padding: 15px 48px 15px 15px;
+
+            i {
+                right: 20px;
+                left: auto;
+            }
+        }
+    }    
+    &.with-padding-left {
+        padding: {
+            right: 30px;
+            left: 0;
+        };
+    }
+}
+.security-content {
+    padding: {
+        right: 50px;
+        left: 0;
+    };
+    .security-inner-box {
+        padding: {
+            right: 70px;
+            left: 0;
+        };
+        .icon {
+            right: 0;
+            left: auto;
+        }
+    }
+}
+.single-features-card {
+    .content {
+        .list {
+            padding-right: 0;
+
+            li {
+                padding: {
+                    right: 28px;
+                    left: 0;
+                };
+                i {
+                    right: 0;
+                    left: auto;
+                }
+            }
+        }
+    }
+}
+.features-content-wrap {
+    padding: {
+        right: 70px;
+        left: 0;
+    };
+}
+.single-features-box {
+    padding: {
+        right: 80px;
+        left: 0;
+    };
+    .icon {
+        right: 0;
+        left: auto;
+    }
+    .list {
+        padding-right: 0;
+
+        li {
+            padding: {
+                right: 28px;
+                left: 0;
+            };
+            i {
+                right: 0;
+                left: auto;
+            }
+        }
+    }
+}
+.single-coverage-card {
+    .content {
+        padding: {
+            right: 48px;
+            left: 0;
+        };
+        .coverage-image {
+            right: 0;
+            left: auto;
+        }
+    }
+}
+.single-review-box {
+    .review-rating {
+        padding-right: 0;
+    }    
+}
+.overview-content {
+    .overview-btn-group {
+        li {
+            margin: {
+                left: 20px;
+                right: 0;
+            };
+            &:last-child {
+                margin-left: 0;
+            }
+        }
+    }
+}
+.faq-accordion {
+    .accordion-item {
+        .accordion-button {
+            padding: 20px 25px 20px 55px;
+
+            &::before {
+                left: 20px;
+                right: auto;
+                top: 15px;
+            }
+        }
+    }
+}
+.single-footer-widget {
+    &.ps-5 {
+        padding-right: 3rem !important;
+        padding-left: 0 !important;
+    }
+    .widget-social {
+        li {
+            margin: {
+                left: 5px;
+                right: 0;
+            };
+            &:last-child {
+                margin-left: 0;
+            }
+        }
+    }
+    .newsletter-form {
+        .input-newsletter {
+            padding: 15px 15px 15px 130px;
+        }
+        button {
+            left: 0;
+            right: auto;
+        }
+    }
+    h3 {
+        &::before {
+            right: 0;
+            left: auto;
+        }
+    }
+}
+.go-top {
+    left: 20px;
+    right: auto;
+}
+.getting-started-accordion {
+    .accordion-item {
+        &::before {
+            right: 4px;
+            left: auto;
+        }
+        .accordion-button {
+            padding: 0 25px 15px 0;
+            text-align: right;
+
+            &::before {
+                right: 0;
+                left: auto;
+            }
+        }
+        .accordion-body {
+            padding: 0 25px 20px 0;
+        }
+    }
+}
+.single-benefits-card {
+    .benefits-content {
+        padding: {
+            right: 95px;
+            left: 0;
+        };
+        .benefits-image {
+            right: 0;
+            left: auto;
+
+            img {
+                right: 7px;
+                left: auto;
+            }
+        }
+    }
+}
+.main-banner-wrap-content {
+    padding: {
+        left: 30px;
+        right: 0;
+    };
+    .banner-btn-group {
+        li {
+            margin: {
+                left: 20px;
+                right: 0;
+            };
+            &:last-child {
+                margin-left: 0;
+            }
+        }
+    }
+}
+.main-banner-wrap-image {
+    .wrap-shape-1 {
+        right: -85px;
+        left: auto;
+    }
+    .wrap-shape-2 {
+        left: 0;
+        right: auto;
+    }
+}
+.reliable-image {
+    .reliable-shape {
+        left: 30%;
+        right: auto;
+        transform: translateX(30%);
+    }
+}
+.reliable-content {
+    .reliable-list {
+        li {
+            padding: {
+                right: 25px;
+                left: 0;
+            };
+            i {
+                right: 0;
+                left: auto;
+            }
+        }
+    }
+    &.with-padding-left {
+        padding: {
+            right: 30px;
+            left: 0;
+        };
+    }
+}
+.paiement-content {
+    padding: {
+        left: 45px;
+        right: 0;
+    };
+    .paiement-list {
+        li {
+            padding: {
+                right: 25px;
+                left: 0;
+            };
+            i {
+                right: 0;
+                left: auto;
+            }
+        }
+    }
+}
+.single-pricing-table {
+    .price {
+        span {
+            right: -4px;
+            left: auto;
+        }
+    }
+    .features-list {
+        li {
+            padding: {
+                right: 22px;
+                left: 0;
+            };
+            i {
+                right: 0;
+                left: auto;
+            }
+        }
+    }
+    .best-sale {
+        left: -40px;
+        right: auto;
+        transform: rotate(-45deg);
+    }
+}
+.single-review-card {
+    .review-info {
+        padding: {
+            right: 65px;
+            left: 0;
+        };
+        img {
+            right: 0;
+            left: auto;
+        }
+    }
+    .reviewquote-image {
+        left: 45px;
+        right: auto;
+    }
+}
+.app-content {
+    .app-btn-box {
+        .appstore-btn {
+            padding: {
+                right: 70px;
+                left: 20px;
+            };
+            margin: {
+                left: 15px;
+                right: auto;
+            };
+            i {
+                right: 20px;
+                left: auto;
+            }
+        }
+        .google-btn {
+            padding: {
+                right: 70px;
+                left: 20px;
+            };
+            i {
+                right: 20px;
+                left: auto;
+            }
+        }
+    }
+}
+.single-blog-card {
+    .blog-image {
+        .date {
+            left: 15px;
+            right: auto;
+        }
+    }
+}
+.page-banner-image {
+    .banner-shape {
+        right: 0;
+        left: auto;
+    }
+}
+.page-banner-content {
+    ul {
+        padding-right: 0;
+
+        li {
+            margin: {
+                right: 25px;
+                left: 0;
+            };
+            &:first-child {
+                margin-right: 0;
+            }
+            &::before {
+                right: -16px;
+                left: auto;
+            }
+        }
+    }
+}
+.single-funfact-box {
+    &::before {
+        right: 0;
+        left: auto;
+    }
+    h3 {
+        .small-text {
+            right: -5px;
+            left: auto;
+        }    
+    }
+}
+.help-center-box {
+    .search-form {
+        .form-control {
+            padding: 15px 48px 15px 15px;
+        }
+        button {
+            right: 15px;
+            left: auto;
+        }
+    }
+}
+.single-explore-card {
+    .explore-content {
+        padding: {
+            right: 95px;
+            left: 0;
+        };
+        .explore-image {
+            right: 0;
+            left: auto;
+
+            img {
+                right: 7px;
+                left: auto;
+            }
+        }
+    }
+}
+.single-team-card {
+    .team-image {
+        .social {
+            li {
+                margin: {
+                    left: 5px;
+                    right: 0;
+                };
+                &:last-child {
+                    margin-left: 0;
+                }
+            }  
+        }
+    }  
+}
+.login-form {
+    h2 {
+        &::before {
+            right: 0;
+            left: auto;
+        }
+    }
+    form {
+        .remember-me-wrap {
+            [type="checkbox"]:checked + label, [type="checkbox"]:not(:checked) + label {
+                padding-right: 28px;
+                padding-left: 0;
+            }
+            [type="checkbox"]:checked + label:before, [type="checkbox"]:not(:checked) + label:before {
+                right: 0;
+                left: auto;
+            }
+            [type="checkbox"]:checked + label:after, [type="checkbox"]:not(:checked) + label:after {
+                right: 5px;
+                left: auto;
+            }
+        }
+    }
+}
+.register-form {
+    h2 {
+        &::before {
+            right: 0;
+            left: auto;
+        }
+    }
+}
+.forgot-password-form {
+    h2 {
+        &::before {
+            right: 0;
+            left: auto;
+        }
+    }
+}
+.blog-details-desc {
+    .article-info-item {
+        .info-content {
+            padding-right: 65px;
+            padding-left: 0;
+
+            img {
+                right: 0;
+                left: auto;
+            }
+        } 
+        .info-social {
+            li {
+                margin-left: 5px;
+                margin-right: 0;
+            }
+        }
+    }   
+    .article-content {
+        .quote-content {
+            img {
+                left: 30px;
+                right: auto;
+            }
+            span {
+                padding-right: 45px;
+                padding-left: 0;
+
+                &::before {
+                    left: 40px;
+                }
+            }
+        }
+        .list {
+            li {
+                padding-right: 18px;
+                padding-left: 0;
+
+                &::before {
+                    right: 0;
+                    left: auto;
+                }
+            }
+        }
+    }
+    .article-tags {
+        a {
+            margin-left: 8px;
+            margin-right: 0;
+        }
+    }
+    .article-leave-comment {
+        .form-cookies-consent {
+            [type="checkbox"]:checked + label, [type="checkbox"]:not(:checked) + label {
+                padding-right: 25px;
+                padding-left: 0;
+            }
+            [type="checkbox"]:checked + label:before, [type="checkbox"]:not(:checked) + label:before {
+                right: 0;
+                left: auto;
+            }
+            [type="checkbox"]:checked + label:after, [type="checkbox"]:not(:checked) + label:after {
+                right: 5px;
+                left: auto;
+            }
+        }
+    }
+}
+#contactForm {
+    .form-group {
+        .form-select {
+            background-position: left .75rem center;
+        }
+    }
+    .form-cookies-consent {
+        [type="checkbox"]:checked + label, [type="checkbox"]:not(:checked) + label {
+            padding-right: 25px;
+            padding-left: 0;
+        }
+        [type="checkbox"]:checked + label:before, [type="checkbox"]:not(:checked) + label:before {
+            right: 0;
+            left: auto;
+        }
+        [type="checkbox"]:checked + label:after, [type="checkbox"]:not(:checked) + label:after {
+            right: 5px;
+            left: auto;
+        }
+    }
+}
+
+/** Responsive Area
+==============================**/
+@media only screen and (max-width: 767px) {
+    .mean-container {
+        a {
+            &.meanmenu-reveal {
+                left: 0 !important;
+                right: auto !important;
+            }
+        }
+        .mean-nav {
+            ul {
+                li {
+                    a {
+                        text-align: right;
+
+                        &.mean-expand {
+                            width: 90%;
+                            text-align: left;
+                            left: 0;
+                            right: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .others-option-for-responsive {
+        .dot-menu {
+            left: 52px;
+            right: auto;
+        }
+        .container {
+            .container {
+                left: 15px;
+                right: auto;
+            }
+        }
+    }
+    .money-transfer-form {
+        .money-transfer-content {
+            .form-group {
+                .lock-icon {
+                    left: 110px;
+                }
+            }
+            .amount-currency-info {
+                padding-right: 0;
+
+                &::before {
+                    right: 10px;
+                    left: auto;
+                }
+                li {
+                    .info-right {
+                        padding-left: 28px;
+                    }
+                }
+            }
+            .amount-btn-group {
+                li {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+    .security-content {
+        padding-right: 0;
+    }
+    .overview-content {
+        .overview-btn-group {
+            li {
+                margin-left: 10px;
+            }
+        }
+    }
+    .single-footer-widget {
+        &.ps-5 {
+            padding-right: 0 !important;
+        }
+    }
+    .money-transfer-form-two {
+        .money-transfer-content {
+            .form-group {
+                .lock-icon {
+                    left: 110px;
+                }
+            }
+            .amount-currency-info {
+                padding-right: 0;
+
+                &::before {
+                    right: 10px;
+                    left: auto;
+                }
+                li {
+                    .info-right {
+                        padding-left: 28px;
+                    }
+                }
+            }
+            .amount-btn-group {
+                li {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+    .why-choose-us-content {
+        &.with-padding-left {
+            padding-right: 0;
+        }
+    }
+    .single-benefits-card {
+        .benefits-content {
+            padding-right: 0;
+        }
+    }
+    .features-content-wrap {
+        padding-right: 0;
+    }
+    .single-features-box {
+        padding-right: 50px;
+    }
+    .app-content {
+        .app-btn-box {
+            .appstore-btn {
+                padding: {
+                    right: 40px;
+                    left: 10px;
+                };
+                margin-left: 10px;
+                i {
+                    right: 10px;
+                }
+            }
+            .google-btn {
+                padding: {
+                    right: 40px;
+                    left: 10px;
+                };
+                i {
+                    right: 10px;
+                }
+            }
+        }
+    }
+    .reliable-content {
+        &.with-padding-left {
+            padding-right: 0;
+        }
+    }
+    .single-explore-card {
+        .explore-content {
+            padding-right: 0;
+        }
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+    .mean-container {
+        a {
+            &.meanmenu-reveal {
+                left: 0 !important;
+                right: auto !important;
+            }
+        }
+        .mean-nav {
+            ul {
+                li {
+                    a {
+                        text-align: right;
+
+                        &.mean-expand {
+                            width: 90%;
+                            text-align: left;
+                            left: 20px;
+                            right: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .others-option-for-responsive {
+        .dot-menu {
+            left: 52px;
+            right: auto;
+        }
+        .container {
+            .container {
+                left: 15px;
+                right: auto;
+            }
+        }
+    }
+    .security-content {
+        padding-right: 0;
+    }
+    .single-footer-widget {
+        &.ps-5 {
+            padding-right: 0 !important;
+        }
+    }
+    .why-choose-us-content {
+        &.with-padding-left {
+            padding-right: 0;
+        }
+    }
+    .single-benefits-card {
+        .benefits-content {
+            padding-right: 0;
+        }
+    }
+    .features-content-wrap {
+        padding-right: 0;
+    }
+    .single-features-box {
+        padding-right: 50px;
+    }
+    .reliable-content {
+        &.with-padding-left {
+            padding-right: 0;
+        }
+    }
+    .single-explore-card {
+        .explore-content {
+            padding-right: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 992px) {
+    .mean-container {
+        a {
+            &.meanmenu-reveal {
+                left: 0 !important;
+                right: auto !important;
+            }
+        }
+        .mean-nav {
+            ul {
+                li {
+                    a {
+                        text-align: right;
+
+                        &.mean-expand {
+                            width: 90%;
+                            text-align: left;
+                            left: 20px;
+                            right: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .others-option-for-responsive {
+        .dot-menu {
+            left: 52px;
+            right: auto;
+        }
+        .container {
+            .container {
+                left: 15px;
+                right: auto;
+            }
+        }
+    }
+    .main-banner-content {
+        .trust-content {
+            li {
+                margin-left: 15px;
+            }
+        }
+    }
+    .money-transfer-form {
+        .money-transfer-content {
+            .form-group {
+                .lock-icon {
+                    left: 110px;
+                }
+            }
+            .amount-currency-info {
+                padding-right: 0;
+
+                &::before {
+                    right: 10px;
+                }
+                li {
+                    .info-right {
+                        padding-left: 28px;
+                    }
+                }
+            }
+        }
+    }
+    .single-footer-widget {
+        .newsletter-form {
+            .input-newsletter {
+                padding: 15px 15px 15px 95px;
+            }
+        }
+    }
+    .money-transfer-form-two {
+        .money-transfer-content {
+            .form-group {
+                .lock-icon {
+                    left: 110px;
+                }
+            }
+            .amount-currency-info {
+                padding-right: 0;
+
+                &::before {
+                    right: 10px;
+                }
+                li {
+                    .info-right {
+                        padding-left: 28px;
+                    }
+                }
+            }
+            .amount-btn-group {
+                li {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+    .single-features-box {
+        padding-right: 45px;
+        
+        .list {
+            li {
+                padding-right: 20px;
+            }
+        }
+    }
+    .single-footer-widget {
+        &.ps-5 {
+            padding-right: 0 !important;
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+    .main-navbar {
+        .navbar {
+            .navbar-nav {
+                .nav-item {
+                    .dropdown-menu {
+                        li {
+                            .dropdown-menu {
+                                right: -250px;
+                                left: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .money-transfer-form {
+        .money-transfer-content {
+            .form-group {
+                .lock-icon {
+                    left: 110px;
+                }
+            }
+            .amount-currency-info {
+                padding-right: 0;
+
+                &::before {
+                    right: 10px;
+                }
+                li {
+                    .info-right {
+                        padding-left: 28px;
+                    }
+                }
+            }
+        }
+    }
+    .money-transfer-form-two {
+        .money-transfer-content {
+            .form-group {
+                .lock-icon {
+                    left: 110px;
+                }
+            }
+            .amount-currency-info {
+                padding-right: 0;
+
+                &::before {
+                    right: 10px;
+                }
+                li {
+                    .info-right {
+                        padding-left: 28px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1550px) {
+
+}

@@ -1,7 +1,10 @@
 const myModule = require('./index.js');
 const appadmin = require('./admin.js');
+const front = require('./front.js');
 
 const app = myModule.main;
+
+
 
 app.listen(process.env.PORT || 2000, function(req,res){
   console.log("server is now starting @ 2000!");

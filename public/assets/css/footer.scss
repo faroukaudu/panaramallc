@@ -1,0 +1,244 @@
+/*================================================
+Footer Area CSS
+=================================================*/
+.footer-area {
+    background-color: #FAFAFB;
+}
+.single-footer-widget {
+    margin-bottom: 25px;
+
+    .widget-logo {
+        margin-bottom: 25px;
+    }
+    p {
+        margin-bottom: 0;
+    }
+    .newsletter-form {
+        margin-top: 20px;
+        position: relative;
+
+        .input-newsletter {
+            display: block;
+            width: 100%;
+            background-color: var(--white-color);
+            border: 1px solid #E5E5E5;
+            height: 60px;
+            padding: 15px 130px 15px 15px;
+            border-radius: 5px;
+            outline: 0;
+            color: var(--paragraph-color);
+            transition: var(--transition);
+
+            &:focus {
+                border: 1px solid var(--main-color);
+
+                &::placeholder {
+                    color: transparent;
+                    transition: var(--transition);
+                }
+            }
+        }
+        button {
+            position: absolute;
+            right: 0;
+            top: 0;
+            border: none;
+            padding: 18px 20px;
+        }
+        #validator-newsletter {
+            color: red;
+            font-weight: 400;
+            font-size: 14px;
+            position: relative;
+            top: 5px;
+        }
+    }
+    .widget-social {
+        padding: 0;
+        margin-bottom: 0;
+        margin-top: 20px;
+
+        li {
+            display: inline-block;
+            list-style-type: none;
+            margin-right: 5px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+            a {
+                i {
+                    display: inline-block;
+                    width: 35px;
+                    height: 35px;
+                    line-height: 35px;
+                    background-color: var(--white-color);
+                    box-shadow: 0 0 1.25rem rgba(108, 118, 134, 0.1);
+                    text-align: center;
+                    font-size: var(--font-size);
+                    color: var(--main-color);
+                    border-radius: 50px;
+                    transition: var(--transition);
+
+                    &:hover {
+                        color: var(--white-color);
+                        background-color: var(--main-color);
+                        transform: translateY(-5px);
+                    }
+                }
+            }
+        }
+    }
+    h3 {
+        font-size: 20px;
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+        position: relative;
+        z-index: 1;
+
+        &::before {
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: 0;
+            background-color: var(--main-color);
+            width: 50px;
+            height: 2px;
+        }
+    }
+    .quick-links {
+        padding: 0;
+        margin-bottom: 0;
+
+        li {
+            margin-bottom: 18px;
+            list-style-type: none;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+            a {
+                color: var(--paragraph-color);
+
+                &:hover {
+                    color: var(--main-color);
+                }
+            }
+        }
+    }
+    .info-links {
+        padding: 0;
+        margin-bottom: 0;
+
+        li {
+            margin-bottom: 18px;
+            list-style-type: none;
+            color: var(--paragraph-color);
+            
+            &:first-child {
+                line-height: 30px;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+            span {
+                font-weight: 500;
+            }
+            a {
+                color: var(--paragraph-color);
+
+                &:hover {
+                    color: var(--main-color);
+                }
+            }
+        }
+    }
+}
+.copyright-area {
+    margin-top: 75px;
+    padding-bottom: 35px;
+    border-top: 1px solid rgba(205, 214, 224, 0.3);
+    padding-top: 30px;
+
+    .copyright-area-content {
+        text-align: center;
+
+        p {
+            a {
+                display: inline-block;
+                font-weight: 500;
+                color: var(--main-color);
+
+                &:hover {
+                    color: var(--optional-color);
+                }
+            }
+        }
+    }
+}
+
+// Responsive CSS
+@media only screen and (max-width: 767px) {
+    .single-footer-widget {
+        &.ps-5 {
+            padding-left: 0 !important;
+        }
+        h3 {
+            font-size: 18px;
+        }
+        .quick-links {
+            li {
+                font-size: 14px;
+            }
+        }
+        .info-links  {
+            li {
+                font-size: 14px;
+            }
+        }
+    }
+    .copyright-area {
+        margin-top: 25px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .single-footer-widget {
+        &.ps-5 {
+            padding-left: 0 !important;
+        }
+        h3 {
+            font-size: 18px;
+        }
+    }
+    .copyright-area {
+        margin-top: 25px;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .single-footer-widget {
+        &.ps-5 {
+            padding-left: 0 !important;
+        }
+        h3 {
+            font-size: 18px;
+        }
+        .newsletter-form {
+            .input-newsletter {
+                padding: 15px 95px 15px 15px;
+            }
+            button {
+                padding: 18px 10px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+    
+}

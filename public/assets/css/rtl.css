@@ -1,0 +1,1080 @@
+.ms-auto {
+  margin-right: auto !important;
+  margin-left: unset !important;
+}
+
+.topbar-information {
+  padding-right: 0;
+}
+
+.topbar-information li {
+  margin-left: 20px;
+  margin-right: 0;
+}
+
+.topbar-information li:last-child {
+  margin-left: 0;
+}
+
+.topbar-information li::before {
+  left: -14px;
+  right: auto;
+}
+
+.topbar-action li {
+  margin-left: 20px;
+  margin-right: 0;
+}
+
+.topbar-action li:last-child {
+  margin-left: 0;
+}
+
+.topbar-action li::before {
+  left: -14px;
+  right: auto;
+}
+
+.language-option button {
+  padding-left: 22px;
+  padding-right: 22px;
+}
+
+.language-option button i {
+  position: absolute;
+  right: 0;
+  margin-left: 5px;
+  margin-right: 0;
+}
+
+.language-option button::before {
+  left: 0;
+  right: auto;
+  top: -1px;
+}
+
+.language-option .dropdown-menu[style] {
+  left: 0 !important;
+  right: auto !important;
+}
+
+.language-option .language-dropdown-menu .dropdown-item img {
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+.main-navbar .navbar ul {
+  padding-right: 0;
+}
+
+.main-navbar .navbar .navbar-list ul li {
+  margin-left: 20px;
+  margin-right: 0;
+}
+
+.main-navbar .navbar .navbar-list ul li:last-child {
+  margin-left: 0;
+}
+
+.main-navbar .navbar .navbar-list ul li::before {
+  left: -14px;
+  right: auto;
+}
+
+.main-navbar .navbar .navbar-brand {
+  padding: 0 0 0 30px;
+  margin-right: 0;
+}
+
+.main-navbar .navbar .navbar-nav .nav-item:first-child {
+  margin-left: 15px;
+  margin-right: 0;
+}
+
+.main-navbar .navbar .navbar-nav .nav-item:last-child {
+  margin-right: 15px;
+  margin-left: 0;
+}
+
+.main-navbar .navbar .navbar-nav .nav-item .dropdown-menu {
+  right: 0;
+  left: auto;
+  text-align: right;
+}
+
+.main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li a i {
+  left: 15px;
+  right: auto;
+}
+
+.main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu {
+  left: -250px;
+  right: auto;
+}
+
+.main-navbar .navbar .others-options {
+  margin-right: 30px;
+  margin-left: 0;
+}
+
+.main-navbar .navbar .others-options .option-item {
+  margin-left: 20px;
+  margin-right: 0;
+}
+
+.main-navbar .navbar .others-options .option-item:last-child {
+  margin-left: 0;
+}
+
+.main-banner-content span::before {
+  left: -55px;
+  right: auto;
+}
+
+.main-banner-content .trust-content {
+  padding-right: 0;
+}
+
+.main-banner-content .trust-content li {
+  margin-left: 30px;
+  margin-right: 0;
+}
+
+.main-banner-content .trust-content li:last-child {
+  margin-left: 0;
+}
+
+.main-banner-shape-2 {
+  left: 30%;
+  right: auto;
+  -webkit-transform: translateX(30%);
+          transform: translateX(30%);
+}
+
+.money-transfer-form .money-transfer-content .form-group label {
+  right: 24px;
+  left: auto;
+}
+
+.money-transfer-form .money-transfer-content .form-group .form-control {
+  padding-right: 0;
+  padding-left: 135px;
+}
+
+.money-transfer-form .money-transfer-content .form-group .amount-currency-select {
+  left: 0;
+  right: auto;
+}
+
+.money-transfer-form .money-transfer-content .form-group .amount-currency-select button {
+  padding: 15px 15px 15px 40px;
+  border-radius: 10px 0 0 10px;
+}
+
+.money-transfer-form .money-transfer-content .form-group .amount-currency-select button::before {
+  left: 15px;
+  right: auto;
+}
+
+.money-transfer-form .money-transfer-content .form-group .amount-currency-select button img {
+  margin-left: 5px;
+  margin-right: auto;
+}
+
+.money-transfer-form .money-transfer-content .form-group .amount-currency-select .dropdown-menu[style] {
+  left: 0 !important;
+  right: auto !important;
+}
+
+.money-transfer-form .money-transfer-content .form-group .amount-currency-select .currency-dropdown-menu .dropdown-item img {
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+.money-transfer-form .money-transfer-content .form-group .lock-icon {
+  left: 130px;
+  right: auto;
+}
+
+.money-transfer-form .money-transfer-content .amount-currency-info {
+  padding-right: 20px;
+  padding-left: 0;
+}
+
+.money-transfer-form .money-transfer-content .amount-currency-info::before {
+  right: 35px;
+  left: auto;
+}
+
+.money-transfer-form .money-transfer-content .amount-currency-info li .info-right {
+  padding-left: 35px;
+  padding-right: 0;
+}
+
+.money-transfer-form .money-transfer-content .amount-currency-info li .info-right .fee-text {
+  left: 0;
+  right: auto;
+}
+
+.money-transfer-form .money-transfer-content .amount-currency-info li .info-right .amount-currency-select button {
+  padding: 10px 10px 10px 40px;
+}
+
+.money-transfer-form .money-transfer-content .amount-currency-info li .info-right .amount-currency-select button::before {
+  left: 10px;
+  right: auto;
+}
+
+.money-transfer-form .money-transfer-content .amount-currency-info li .info-left strong i {
+  margin-right: 5px;
+  margin-left: 0;
+}
+
+.money-transfer-form .money-transfer-content .amount-btn-group {
+  padding-right: 0;
+}
+
+.money-transfer-form .money-transfer-content .amount-btn-group li {
+  margin-left: 20px;
+  margin-right: 0;
+}
+
+.money-transfer-form .money-transfer-content .amount-btn-group li:last-child {
+  margin-left: 0;
+}
+
+.main-hero-content span {
+  padding: 5px 40px 5px 15px;
+}
+
+.main-hero-content span i {
+  right: 15px;
+  left: auto;
+}
+
+.money-transfer-form-two .money-transfer-content .form-group label {
+  right: 24px;
+  left: auto;
+}
+
+.money-transfer-form-two .money-transfer-content .form-group .form-control {
+  padding-right: 0;
+  padding-left: 135px;
+}
+
+.money-transfer-form-two .money-transfer-content .form-group .amount-currency-select {
+  left: 0;
+  right: auto;
+}
+
+.money-transfer-form-two .money-transfer-content .form-group .amount-currency-select button {
+  padding: 15px 15px 15px 40px;
+  border-radius: 10px 0 0 10px;
+}
+
+.money-transfer-form-two .money-transfer-content .form-group .amount-currency-select button::before {
+  left: 15px;
+  right: auto;
+}
+
+.money-transfer-form-two .money-transfer-content .form-group .amount-currency-select button img {
+  margin-left: 5px;
+  margin-right: auto;
+}
+
+.money-transfer-form-two .money-transfer-content .form-group .amount-currency-select .dropdown-menu[style] {
+  left: 0 !important;
+  right: auto !important;
+}
+
+.money-transfer-form-two .money-transfer-content .form-group .amount-currency-select .currency-dropdown-menu .dropdown-item img {
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+.money-transfer-form-two .money-transfer-content .form-group .lock-icon {
+  left: 130px;
+  right: auto;
+}
+
+.money-transfer-form-two .money-transfer-content .amount-currency-info {
+  padding-right: 20px;
+  padding-left: 0;
+}
+
+.money-transfer-form-two .money-transfer-content .amount-currency-info::before {
+  right: 35px;
+  left: auto;
+}
+
+.money-transfer-form-two .money-transfer-content .amount-currency-info li .info-right {
+  padding-left: 35px;
+  padding-right: 0;
+}
+
+.money-transfer-form-two .money-transfer-content .amount-currency-info li .info-right .fee-text {
+  left: 0;
+  right: auto;
+}
+
+.money-transfer-form-two .money-transfer-content .amount-currency-info li .info-right .amount-currency-select button {
+  padding: 10px 10px 10px 40px;
+}
+
+.money-transfer-form-two .money-transfer-content .amount-currency-info li .info-right .amount-currency-select button::before {
+  left: 10px;
+  right: auto;
+}
+
+.money-transfer-form-two .money-transfer-content .amount-currency-info li .info-left strong i {
+  margin-right: 5px;
+  margin-left: 0;
+}
+
+.money-transfer-form-two .money-transfer-content .amount-btn-group {
+  padding-right: 0;
+}
+
+.money-transfer-form-two .money-transfer-content .amount-btn-group li {
+  margin-left: 20px;
+  margin-right: 0;
+}
+
+.money-transfer-form-two .money-transfer-content .amount-btn-group li:last-child {
+  margin-left: 0;
+}
+
+.main-hero-shape {
+  left: 30%;
+  right: auto;
+  -webkit-transform: translateX(30%);
+          transform: translateX(30%);
+}
+
+.main-hero-shape-2 {
+  left: 5%;
+  right: auto;
+  -webkit-transform: translateX(5%);
+          transform: translateX(5%);
+}
+
+.why-choose-us-content .choose-us-list {
+  padding-right: 0;
+}
+
+.why-choose-us-content .choose-us-list li {
+  padding: 15px 48px 15px 15px;
+}
+
+.why-choose-us-content .choose-us-list li i {
+  right: 20px;
+  left: auto;
+}
+
+.why-choose-us-content.with-padding-left {
+  padding-right: 30px;
+  padding-left: 0;
+}
+
+.security-content {
+  padding-right: 50px;
+  padding-left: 0;
+}
+
+.security-content .security-inner-box {
+  padding-right: 70px;
+  padding-left: 0;
+}
+
+.security-content .security-inner-box .icon {
+  right: 0;
+  left: auto;
+}
+
+.single-features-card .content .list {
+  padding-right: 0;
+}
+
+.single-features-card .content .list li {
+  padding-right: 28px;
+  padding-left: 0;
+}
+
+.single-features-card .content .list li i {
+  right: 0;
+  left: auto;
+}
+
+.features-content-wrap {
+  padding-right: 70px;
+  padding-left: 0;
+}
+
+.single-features-box {
+  padding-right: 80px;
+  padding-left: 0;
+}
+
+.single-features-box .icon {
+  right: 0;
+  left: auto;
+}
+
+.single-features-box .list {
+  padding-right: 0;
+}
+
+.single-features-box .list li {
+  padding-right: 28px;
+  padding-left: 0;
+}
+
+.single-features-box .list li i {
+  right: 0;
+  left: auto;
+}
+
+.single-coverage-card .content {
+  padding-right: 48px;
+  padding-left: 0;
+}
+
+.single-coverage-card .content .coverage-image {
+  right: 0;
+  left: auto;
+}
+
+.single-review-box .review-rating {
+  padding-right: 0;
+}
+
+.overview-content .overview-btn-group li {
+  margin-left: 20px;
+  margin-right: 0;
+}
+
+.overview-content .overview-btn-group li:last-child {
+  margin-left: 0;
+}
+
+.faq-accordion .accordion-item .accordion-button {
+  padding: 20px 25px 20px 55px;
+}
+
+.faq-accordion .accordion-item .accordion-button::before {
+  left: 20px;
+  right: auto;
+  top: 15px;
+}
+
+.single-footer-widget.ps-5 {
+  padding-right: 3rem !important;
+  padding-left: 0 !important;
+}
+
+.single-footer-widget .widget-social li {
+  margin-left: 5px;
+  margin-right: 0;
+}
+
+.single-footer-widget .widget-social li:last-child {
+  margin-left: 0;
+}
+
+.single-footer-widget .newsletter-form .input-newsletter {
+  padding: 15px 15px 15px 130px;
+}
+
+.single-footer-widget .newsletter-form button {
+  left: 0;
+  right: auto;
+}
+
+.single-footer-widget h3::before {
+  right: 0;
+  left: auto;
+}
+
+.go-top {
+  left: 20px;
+  right: auto;
+}
+
+.getting-started-accordion .accordion-item::before {
+  right: 4px;
+  left: auto;
+}
+
+.getting-started-accordion .accordion-item .accordion-button {
+  padding: 0 25px 15px 0;
+  text-align: right;
+}
+
+.getting-started-accordion .accordion-item .accordion-button::before {
+  right: 0;
+  left: auto;
+}
+
+.getting-started-accordion .accordion-item .accordion-body {
+  padding: 0 25px 20px 0;
+}
+
+.single-benefits-card .benefits-content {
+  padding-right: 95px;
+  padding-left: 0;
+}
+
+.single-benefits-card .benefits-content .benefits-image {
+  right: 0;
+  left: auto;
+}
+
+.single-benefits-card .benefits-content .benefits-image img {
+  right: 7px;
+  left: auto;
+}
+
+.main-banner-wrap-content {
+  padding-left: 30px;
+  padding-right: 0;
+}
+
+.main-banner-wrap-content .banner-btn-group li {
+  margin-left: 20px;
+  margin-right: 0;
+}
+
+.main-banner-wrap-content .banner-btn-group li:last-child {
+  margin-left: 0;
+}
+
+.main-banner-wrap-image .wrap-shape-1 {
+  right: -85px;
+  left: auto;
+}
+
+.main-banner-wrap-image .wrap-shape-2 {
+  left: 0;
+  right: auto;
+}
+
+.reliable-image .reliable-shape {
+  left: 30%;
+  right: auto;
+  -webkit-transform: translateX(30%);
+          transform: translateX(30%);
+}
+
+.reliable-content .reliable-list li {
+  padding-right: 25px;
+  padding-left: 0;
+}
+
+.reliable-content .reliable-list li i {
+  right: 0;
+  left: auto;
+}
+
+.reliable-content.with-padding-left {
+  padding-right: 30px;
+  padding-left: 0;
+}
+
+.paiement-content {
+  padding-left: 45px;
+  padding-right: 0;
+}
+
+.paiement-content .paiement-list li {
+  padding-right: 25px;
+  padding-left: 0;
+}
+
+.paiement-content .paiement-list li i {
+  right: 0;
+  left: auto;
+}
+
+.single-pricing-table .price span {
+  right: -4px;
+  left: auto;
+}
+
+.single-pricing-table .features-list li {
+  padding-right: 22px;
+  padding-left: 0;
+}
+
+.single-pricing-table .features-list li i {
+  right: 0;
+  left: auto;
+}
+
+.single-pricing-table .best-sale {
+  left: -40px;
+  right: auto;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.single-review-card .review-info {
+  padding-right: 65px;
+  padding-left: 0;
+}
+
+.single-review-card .review-info img {
+  right: 0;
+  left: auto;
+}
+
+.single-review-card .reviewquote-image {
+  left: 45px;
+  right: auto;
+}
+
+.app-content .app-btn-box .appstore-btn {
+  padding-right: 70px;
+  padding-left: 20px;
+  margin-left: 15px;
+  margin-right: auto;
+}
+
+.app-content .app-btn-box .appstore-btn i {
+  right: 20px;
+  left: auto;
+}
+
+.app-content .app-btn-box .google-btn {
+  padding-right: 70px;
+  padding-left: 20px;
+}
+
+.app-content .app-btn-box .google-btn i {
+  right: 20px;
+  left: auto;
+}
+
+.single-blog-card .blog-image .date {
+  left: 15px;
+  right: auto;
+}
+
+.page-banner-image .banner-shape {
+  right: 0;
+  left: auto;
+}
+
+.page-banner-content ul {
+  padding-right: 0;
+}
+
+.page-banner-content ul li {
+  margin-right: 25px;
+  margin-left: 0;
+}
+
+.page-banner-content ul li:first-child {
+  margin-right: 0;
+}
+
+.page-banner-content ul li::before {
+  right: -16px;
+  left: auto;
+}
+
+.single-funfact-box::before {
+  right: 0;
+  left: auto;
+}
+
+.single-funfact-box h3 .small-text {
+  right: -5px;
+  left: auto;
+}
+
+.help-center-box .search-form .form-control {
+  padding: 15px 48px 15px 15px;
+}
+
+.help-center-box .search-form button {
+  right: 15px;
+  left: auto;
+}
+
+.single-explore-card .explore-content {
+  padding-right: 95px;
+  padding-left: 0;
+}
+
+.single-explore-card .explore-content .explore-image {
+  right: 0;
+  left: auto;
+}
+
+.single-explore-card .explore-content .explore-image img {
+  right: 7px;
+  left: auto;
+}
+
+.single-team-card .team-image .social li {
+  margin-left: 5px;
+  margin-right: 0;
+}
+
+.single-team-card .team-image .social li:last-child {
+  margin-left: 0;
+}
+
+.login-form h2::before {
+  right: 0;
+  left: auto;
+}
+
+.login-form form .remember-me-wrap [type="checkbox"]:checked + label, .login-form form .remember-me-wrap [type="checkbox"]:not(:checked) + label {
+  padding-right: 28px;
+  padding-left: 0;
+}
+
+.login-form form .remember-me-wrap [type="checkbox"]:checked + label:before, .login-form form .remember-me-wrap [type="checkbox"]:not(:checked) + label:before {
+  right: 0;
+  left: auto;
+}
+
+.login-form form .remember-me-wrap [type="checkbox"]:checked + label:after, .login-form form .remember-me-wrap [type="checkbox"]:not(:checked) + label:after {
+  right: 5px;
+  left: auto;
+}
+
+.register-form h2::before {
+  right: 0;
+  left: auto;
+}
+
+.forgot-password-form h2::before {
+  right: 0;
+  left: auto;
+}
+
+.blog-details-desc .article-info-item .info-content {
+  padding-right: 65px;
+  padding-left: 0;
+}
+
+.blog-details-desc .article-info-item .info-content img {
+  right: 0;
+  left: auto;
+}
+
+.blog-details-desc .article-info-item .info-social li {
+  margin-left: 5px;
+  margin-right: 0;
+}
+
+.blog-details-desc .article-content .quote-content img {
+  left: 30px;
+  right: auto;
+}
+
+.blog-details-desc .article-content .quote-content span {
+  padding-right: 45px;
+  padding-left: 0;
+}
+
+.blog-details-desc .article-content .quote-content span::before {
+  left: 40px;
+}
+
+.blog-details-desc .article-content .list li {
+  padding-right: 18px;
+  padding-left: 0;
+}
+
+.blog-details-desc .article-content .list li::before {
+  right: 0;
+  left: auto;
+}
+
+.blog-details-desc .article-tags a {
+  margin-left: 8px;
+  margin-right: 0;
+}
+
+.blog-details-desc .article-leave-comment .form-cookies-consent [type="checkbox"]:checked + label, .blog-details-desc .article-leave-comment .form-cookies-consent [type="checkbox"]:not(:checked) + label {
+  padding-right: 25px;
+  padding-left: 0;
+}
+
+.blog-details-desc .article-leave-comment .form-cookies-consent [type="checkbox"]:checked + label:before, .blog-details-desc .article-leave-comment .form-cookies-consent [type="checkbox"]:not(:checked) + label:before {
+  right: 0;
+  left: auto;
+}
+
+.blog-details-desc .article-leave-comment .form-cookies-consent [type="checkbox"]:checked + label:after, .blog-details-desc .article-leave-comment .form-cookies-consent [type="checkbox"]:not(:checked) + label:after {
+  right: 5px;
+  left: auto;
+}
+
+#contactForm .form-group .form-select {
+  background-position: left .75rem center;
+}
+
+#contactForm .form-cookies-consent [type="checkbox"]:checked + label, #contactForm .form-cookies-consent [type="checkbox"]:not(:checked) + label {
+  padding-right: 25px;
+  padding-left: 0;
+}
+
+#contactForm .form-cookies-consent [type="checkbox"]:checked + label:before, #contactForm .form-cookies-consent [type="checkbox"]:not(:checked) + label:before {
+  right: 0;
+  left: auto;
+}
+
+#contactForm .form-cookies-consent [type="checkbox"]:checked + label:after, #contactForm .form-cookies-consent [type="checkbox"]:not(:checked) + label:after {
+  right: 5px;
+  left: auto;
+}
+
+/** Responsive Area
+==============================**/
+@media only screen and (max-width: 767px) {
+  .mean-container a.meanmenu-reveal {
+    left: 0 !important;
+    right: auto !important;
+  }
+  .mean-container .mean-nav ul li a {
+    text-align: right;
+  }
+  .mean-container .mean-nav ul li a.mean-expand {
+    width: 90%;
+    text-align: left;
+    left: 0;
+    right: auto;
+  }
+  .others-option-for-responsive .dot-menu {
+    left: 52px;
+    right: auto;
+  }
+  .others-option-for-responsive .container .container {
+    left: 15px;
+    right: auto;
+  }
+  .money-transfer-form .money-transfer-content .form-group .lock-icon {
+    left: 110px;
+  }
+  .money-transfer-form .money-transfer-content .amount-currency-info {
+    padding-right: 0;
+  }
+  .money-transfer-form .money-transfer-content .amount-currency-info::before {
+    right: 10px;
+    left: auto;
+  }
+  .money-transfer-form .money-transfer-content .amount-currency-info li .info-right {
+    padding-left: 28px;
+  }
+  .money-transfer-form .money-transfer-content .amount-btn-group li {
+    margin-left: 10px;
+  }
+  .security-content {
+    padding-right: 0;
+  }
+  .overview-content .overview-btn-group li {
+    margin-left: 10px;
+  }
+  .single-footer-widget.ps-5 {
+    padding-right: 0 !important;
+  }
+  .money-transfer-form-two .money-transfer-content .form-group .lock-icon {
+    left: 110px;
+  }
+  .money-transfer-form-two .money-transfer-content .amount-currency-info {
+    padding-right: 0;
+  }
+  .money-transfer-form-two .money-transfer-content .amount-currency-info::before {
+    right: 10px;
+    left: auto;
+  }
+  .money-transfer-form-two .money-transfer-content .amount-currency-info li .info-right {
+    padding-left: 28px;
+  }
+  .money-transfer-form-two .money-transfer-content .amount-btn-group li {
+    margin-left: 10px;
+  }
+  .why-choose-us-content.with-padding-left {
+    padding-right: 0;
+  }
+  .single-benefits-card .benefits-content {
+    padding-right: 0;
+  }
+  .features-content-wrap {
+    padding-right: 0;
+  }
+  .single-features-box {
+    padding-right: 50px;
+  }
+  .app-content .app-btn-box .appstore-btn {
+    padding-right: 40px;
+    padding-left: 10px;
+    margin-left: 10px;
+  }
+  .app-content .app-btn-box .appstore-btn i {
+    right: 10px;
+  }
+  .app-content .app-btn-box .google-btn {
+    padding-right: 40px;
+    padding-left: 10px;
+  }
+  .app-content .app-btn-box .google-btn i {
+    right: 10px;
+  }
+  .reliable-content.with-padding-left {
+    padding-right: 0;
+  }
+  .single-explore-card .explore-content {
+    padding-right: 0;
+  }
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+  .mean-container a.meanmenu-reveal {
+    left: 0 !important;
+    right: auto !important;
+  }
+  .mean-container .mean-nav ul li a {
+    text-align: right;
+  }
+  .mean-container .mean-nav ul li a.mean-expand {
+    width: 90%;
+    text-align: left;
+    left: 20px;
+    right: auto;
+  }
+  .others-option-for-responsive .dot-menu {
+    left: 52px;
+    right: auto;
+  }
+  .others-option-for-responsive .container .container {
+    left: 15px;
+    right: auto;
+  }
+  .security-content {
+    padding-right: 0;
+  }
+  .single-footer-widget.ps-5 {
+    padding-right: 0 !important;
+  }
+  .why-choose-us-content.with-padding-left {
+    padding-right: 0;
+  }
+  .single-benefits-card .benefits-content {
+    padding-right: 0;
+  }
+  .features-content-wrap {
+    padding-right: 0;
+  }
+  .single-features-box {
+    padding-right: 50px;
+  }
+  .reliable-content.with-padding-left {
+    padding-right: 0;
+  }
+  .single-explore-card .explore-content {
+    padding-right: 0;
+  }
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 992px) {
+  .mean-container a.meanmenu-reveal {
+    left: 0 !important;
+    right: auto !important;
+  }
+  .mean-container .mean-nav ul li a {
+    text-align: right;
+  }
+  .mean-container .mean-nav ul li a.mean-expand {
+    width: 90%;
+    text-align: left;
+    left: 20px;
+    right: auto;
+  }
+  .others-option-for-responsive .dot-menu {
+    left: 52px;
+    right: auto;
+  }
+  .others-option-for-responsive .container .container {
+    left: 15px;
+    right: auto;
+  }
+  .main-banner-content .trust-content li {
+    margin-left: 15px;
+  }
+  .money-transfer-form .money-transfer-content .form-group .lock-icon {
+    left: 110px;
+  }
+  .money-transfer-form .money-transfer-content .amount-currency-info {
+    padding-right: 0;
+  }
+  .money-transfer-form .money-transfer-content .amount-currency-info::before {
+    right: 10px;
+  }
+  .money-transfer-form .money-transfer-content .amount-currency-info li .info-right {
+    padding-left: 28px;
+  }
+  .single-footer-widget .newsletter-form .input-newsletter {
+    padding: 15px 15px 15px 95px;
+  }
+  .money-transfer-form-two .money-transfer-content .form-group .lock-icon {
+    left: 110px;
+  }
+  .money-transfer-form-two .money-transfer-content .amount-currency-info {
+    padding-right: 0;
+  }
+  .money-transfer-form-two .money-transfer-content .amount-currency-info::before {
+    right: 10px;
+  }
+  .money-transfer-form-two .money-transfer-content .amount-currency-info li .info-right {
+    padding-left: 28px;
+  }
+  .money-transfer-form-two .money-transfer-content .amount-btn-group li {
+    margin-left: 10px;
+  }
+  .single-features-box {
+    padding-right: 45px;
+  }
+  .single-features-box .list li {
+    padding-right: 20px;
+  }
+  .single-footer-widget.ps-5 {
+    padding-right: 0 !important;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu {
+    right: -250px;
+    left: auto;
+  }
+  .money-transfer-form .money-transfer-content .form-group .lock-icon {
+    left: 110px;
+  }
+  .money-transfer-form .money-transfer-content .amount-currency-info {
+    padding-right: 0;
+  }
+  .money-transfer-form .money-transfer-content .amount-currency-info::before {
+    right: 10px;
+  }
+  .money-transfer-form .money-transfer-content .amount-currency-info li .info-right {
+    padding-left: 28px;
+  }
+  .money-transfer-form-two .money-transfer-content .form-group .lock-icon {
+    left: 110px;
+  }
+  .money-transfer-form-two .money-transfer-content .amount-currency-info {
+    padding-right: 0;
+  }
+  .money-transfer-form-two .money-transfer-content .amount-currency-info::before {
+    right: 10px;
+  }
+  .money-transfer-form-two .money-transfer-content .amount-currency-info li .info-right {
+    padding-left: 28px;
+  }
+}
+/*# sourceMappingURL=rtl.css.map */
