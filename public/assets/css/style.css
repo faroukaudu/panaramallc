@@ -72,6 +72,8 @@ body {
   font-size: var(--font-size);
 }
 
+
+
 a {
   text-decoration: none;
   -webkit-transition: var(--transition);
@@ -1160,21 +1162,42 @@ Main Banner Area CSS
 /*================================================
 Main Hero Area CSS
 =================================================*/
-.main-hero-area {
-  background-image: url(../../assets/images/main-banner/banner-bg.jpg);
+
+
+/* #myVideo {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  min-width: 100%;
+  min-height: 100%;
+  display: none;
+} */
+
+.myvideo {
+  min-width: 100%;
+  min-height: 10%;
+  position: absolute;
+}
+.main-hero-area{
+  /* background-image: url(../../assets/images/main-banner/money-count.mp4); */
+  /* background-image: url(../../assets/images/main-banner/banner-bg.jpg); */
   background-position: center right;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  z-index: 1;
+  z-index: 0;
   overflow: hidden;
   padding-top: 100px;
-  padding-bottom: 100px;
+  padding-bottom: 10%;
 }
+
+
 
 .main-hero-area .container-fluid {
   padding-left: 30px;
   padding-right: 30px;
+
 }
 
 .main-hero-content {
@@ -3527,6 +3550,7 @@ Page Banner Area CSS
 .page-banner-image {
   text-align: end;
   position: relative;
+  width: 50%;
 }
 
 .page-banner-image img {
@@ -3538,7 +3562,9 @@ Page Banner Area CSS
   position: absolute;
   left: 0;
   top: 50px;
+
 }
+
 
 .page-banner-image .banner-shape img {
   -webkit-animation-name: rotateme;

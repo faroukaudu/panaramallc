@@ -1,6 +1,17 @@
 const myModule = require('./index.js');
+const mongoose = require("mongoose");
 const User = myModule.db;
 const app = myModule.main;
+var adminschema = require(__dirname + '/db/admindb.js');
+
+function superAdminDB(){
+  // adminschema.plugin(uniqueValidator);
+  const Admindb = mongoose.model("Admin", adminschema);
+    return Admindb;
+}
+
+const Admin = superAdminDB();
+
 
 
 
@@ -9,6 +20,36 @@ const app = myModule.main;
 //const app = myModule.main;
 
 //LOADING ADMIN page
+app.get("/admin-login", function(req,res){
+  res.sendFile(__dirname + "/front_panel/login.html")
+})
+
+
+app.post("/admin-login", function(req,res){
+  let admin_Email = req.body.adminEmail;
+  let admin_Pass = req.body.adminPass;
+  console.log(admin_Email);
+
+  // var database = Admin.find();
+  // console.log(database);
+
+  Admin.findOne({username:admin_Email}, function(err, adminFound){
+
+    if(adminFound){
+      if(adminFound.password === admin_Pass){
+        res.redirect('/admin');
+      }else{
+        res.send("Incorrect Password")
+      }
+    }else{
+      console.log(err);
+    }
+
+  })
+
+})
+
+
 app.get("/admin", function(req, res){
    User.find({}, function(err,docs){
     if(err){

@@ -1,6 +1,12 @@
 /*================================================
 Default CSS
 =================================================*/
+
+.hero-text{
+  font-size: 50px;
+  font-weight:normal;
+
+}
 .switch-box {
   position: fixed;
   z-index: 1;
@@ -33,6 +39,7 @@ Default CSS
   background: var(--main-color);
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  display: none;
 }
 
 .switch-box .slider:before {

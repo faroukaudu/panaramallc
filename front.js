@@ -3,8 +3,9 @@ const User = myModule.db;
 const app = myModule.main;
 
 
-app.get("/home", function(req,res){
-  res.sendFile(__dirname + "/front_panel/index-2.html");
+app.get("/", function(req,res){
+  // res.sendFile(__dirname + "/front_panel/index-2.html");
+  res.render("front_panel/main");
 })
 
 app.get("/about-us.html", function(req,res){

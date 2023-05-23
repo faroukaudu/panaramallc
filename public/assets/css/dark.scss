@@ -9,6 +9,7 @@ Default CSS
     left: 30px;
     top: 50%;
     transform: translateY(-50%);
+    display: none;
 
     .switch {
         position: relative;
@@ -31,6 +32,7 @@ Default CSS
         bottom: 0;
         background: var(--main-color);
         transition: 0.4s;
+        display: none;
 
         &:before {
             position: absolute;
@@ -67,7 +69,7 @@ Default CSS
 
             &:before {
                 border-radius: 50%;
-            } 
+            }
         }
     }
 }
@@ -95,7 +97,7 @@ Default CSS
     }
     p {
         color: #f1f1f1;
-        
+
         a {
             color: #f1f1f1 !important;
 
@@ -122,12 +124,12 @@ Default CSS
     .language-option {
         .language-dropdown-menu {
             background-color: #0e0e0e;
-    
+
             .dropdown-item {
                 color: var(--white-color);
                 border-bottom: 1px solid #000000;
                 background-color: #0e0e0e;
-                
+
                 &.selected {
                     background-color: var(--main-color);
                     color: var(--white-color);
@@ -173,7 +175,7 @@ Default CSS
                     .dropdown-menu {
                         background-color: #0e0e0e;
                         border: 1px solid #000000;
-    
+
                         li {
                             a {
                                 color: var(--white-color);
@@ -186,7 +188,7 @@ Default CSS
                                 li {
                                     a {
                                         color: var(--white-color);
-                                        
+
                                         &:hover, &:focus, &.active {
                                             color: var(--main-color);
                                         }
@@ -195,7 +197,7 @@ Default CSS
                                         li {
                                             a {
                                                 color: var(--white-color);
-            
+
                                                 &:hover, &:focus, &.active {
                                                     color: var(--main-color);
                                                 }
@@ -204,7 +206,7 @@ Default CSS
                                                 li {
                                                     a {
                                                         color: var(--white-color);
-                    
+
                                                         &:hover, &:focus, &.active {
                                                             color: var(--main-color);
                                                         }
@@ -213,7 +215,7 @@ Default CSS
                                                         li {
                                                             a {
                                                                 color: var(--white-color);
-                    
+
                                                                 &:hover, &:focus, &.active {
                                                                     color: var(--main-color);
                                                                 }
@@ -222,7 +224,7 @@ Default CSS
                                                                 li {
                                                                     a {
                                                                         color: var(--white-color);
-                    
+
                                                                         &:hover, &:focus, &.active {
                                                                             color: var(--main-color);
                                                                         }
@@ -231,7 +233,7 @@ Default CSS
                                                                         li {
                                                                             a {
                                                                                 color: var(--white-color);
-                    
+
                                                                                 &:hover, &:focus, &.active {
                                                                                     color: var(--main-color);
                                                                                 }
@@ -301,17 +303,17 @@ Default CSS
         .money-transfer-content {
             background-color: var(--black-color);
             border: 1px solid var(--black-color);
-    
+
             .form-group {
                 background: #0e0e0e;
                 border: 1px solid #0e0e0e;
-                
+
                 label {
                     color: var(--white-color);
                 }
                 .form-control {
                     color: var(--white-color);
-                    
+
                     &::placeholder {
                         color: var(--white-color);
                     }
@@ -323,12 +325,12 @@ Default CSS
                     }
                     .currency-dropdown-menu {
                         background-color: #0e0e0e;
-    
+
                         .dropdown-item {
                             color: var(--white-color);
                             border-bottom: 1px solid #0e0e0e;
                             background-color: #000000;
-                            
+
                             &.selected {
                                 background-color: var(--main-color);
                                 color: var(--white-color);
@@ -373,12 +375,12 @@ Default CSS
                             }
                             .currency-dropdown-menu {
                                 background-color: #0e0e0e;
-            
+
                                 .dropdown-item {
                                     color: var(--white-color);
                                     border-bottom: 1px solid #0e0e0e;
                                     background-color: #000000;
-                                    
+
                                     &.selected {
                                         background-color: var(--main-color);
                                         color: var(--white-color);
@@ -399,7 +401,7 @@ Default CSS
             .amount-delivery-time {
                 span {
                     color: var(--white-color);
-    
+
                     b {
                         color: var(--white-color);
                     }
@@ -415,7 +417,7 @@ Default CSS
     .single-getting-started-card {
         background-color: #0e0e0e;
         border: 1px solid #0e0e0e;
-        
+
         &:hover {
             border: 1px solid var(--main-color);
         }
@@ -428,14 +430,14 @@ Default CSS
             }
         }
     }
-    
+
     .compare-pricing-table {
         table {
             thead {
                 tr {
                     th {
                         color: var(--white-color);
-    
+
                         &.bg-2A3F65 {
                             background-color: var(--black-color);
                         }
@@ -446,7 +448,7 @@ Default CSS
                 tr {
                     td {
                         color: var(--white-color);
-    
+
                         &.bg-2A3F65 {
                             background-color: var(--black-color);
                             color: var(--white-color);
@@ -511,7 +513,7 @@ Default CSS
     .single-coverage-card {
         border: 1px solid #000000;
         background-color: #000000;
-        
+
         .content {
             .coverage-image {
                 img {
@@ -532,7 +534,7 @@ Default CSS
     .single-review-box {
         background-color: #0e0e0e;
         border: 1px solid #000000;
-        
+
         .review-info {
             span {
                 color: var(--white-color);
@@ -545,7 +547,7 @@ Default CSS
     .single-review-card {
         background-color: #0e0e0e;
         border: 1px solid #000000;
-        
+
         .review-info {
             span {
                 color: var(--white-color);
@@ -570,10 +572,10 @@ Default CSS
         .accordion-item {
             border: 1px solid #0e0e0e;
             background-color: #0e0e0e;
-            
+
             .accordion-button {
                 color: var(--white-color);
-                
+
                 &::before {
                     color: var(--main-color);
                 }
@@ -599,18 +601,18 @@ Default CSS
     }
     .single-footer-widget {
         .newsletter-form {
-    
+
             .input-newsletter {
                 background-color: #000000;
                 border: 1px solid #000000;
                 color: var(--white-color);
-    
+
                 &::placeholder {
                     color: var(--white-color);
                 }
                 &:focus {
                     border: 1px solid var(--main-color);
-    
+
                     &::placeholder {
                         color: transparent;
                     }
@@ -621,7 +623,7 @@ Default CSS
             li {
                 a {
                     color: var(--white-color);
-    
+
                     &:hover {
                         color: var(--main-color);
                     }
@@ -631,10 +633,10 @@ Default CSS
         .info-links {
             li {
                 color: var(--white-color);
-                
+
                 a {
                     color: var(--white-color);
-    
+
                     &:hover {
                         color: var(--main-color);
                     }
@@ -653,17 +655,17 @@ Default CSS
         .money-transfer-content {
             background-color: var(--black-color);
             border: 1px solid var(--black-color);
-    
+
             .form-group {
                 background: #0e0e0e;
                 border: 1px solid #0e0e0e;
-                
+
                 label {
                     color: var(--white-color);
                 }
                 .form-control {
                     color: var(--white-color);
-                    
+
                     &::placeholder {
                         color: var(--white-color);
                     }
@@ -675,12 +677,12 @@ Default CSS
                     }
                     .currency-dropdown-menu {
                         background-color: #0e0e0e;
-    
+
                         .dropdown-item {
                             color: var(--white-color);
                             border-bottom: 1px solid #0e0e0e;
                             background-color: #000000;
-                            
+
                             &.selected {
                                 background-color: var(--main-color);
                                 color: var(--white-color);
@@ -725,12 +727,12 @@ Default CSS
                             }
                             .currency-dropdown-menu {
                                 background-color: #0e0e0e;
-            
+
                                 .dropdown-item {
                                     color: var(--white-color);
                                     border-bottom: 1px solid #0e0e0e;
                                     background-color: #000000;
-                                    
+
                                     &.selected {
                                         background-color: var(--main-color);
                                         color: var(--white-color);
@@ -751,7 +753,7 @@ Default CSS
             .amount-delivery-time {
                 span {
                     color: var(--white-color);
-    
+
                     b {
                         color: var(--white-color);
                     }
@@ -778,7 +780,7 @@ Default CSS
     }
     .single-global-transfers-card {
         border: 1px solid #000000;
-        
+
         &:hover {
             background-color: #000000;
             border: 1px solid var(--main-color);
@@ -843,7 +845,7 @@ Default CSS
 
     .single-blog-card {
         border: 1px solid #0e0e0e;
-        
+
         &:hover {
             background-color: #0e0e0e;
             border: 1px solid #0e0e0e;
@@ -858,7 +860,7 @@ Default CSS
             li {
                 a {
                     color: var(--white-color);
-                    
+
                     &:hover {
                         color: var(--main-color);
                     }
@@ -873,7 +875,7 @@ Default CSS
 
     .page-banner-wrap-area {
         background-color: #050404;
-    
+
         &::before {
             background-color: #050404;
         }
@@ -884,13 +886,13 @@ Default CSS
                 color: var(--white-color);
                 background-color: #0e0e0e;
                 border: 1px solid #0e0e0e;
-    
+
                 &::placeholder {
                     color: var(--white-color);
                 }
                 &:focus {
                     border: 1px solid var(--main-color);
-    
+
                     &::placeholder {
                         color: transparent;
                     }
@@ -921,7 +923,7 @@ Default CSS
     .login-form {
         background-color: #0e0e0e;
         border: 1px solid #000000;
-        
+
         form {
             .form-group {
                 label {
@@ -931,7 +933,7 @@ Default CSS
                     color: var(--white-color);
                     background-color: #000000;
                     border: 1px solid #000000;
-    
+
                     &::placeholder {
                         color: var(--white-color);
                     }
@@ -955,7 +957,7 @@ Default CSS
             .account-text {
                 span {
                     color: var(--white-color);
-    
+
                     a {
                         color: var(--main-color);
                     }
@@ -970,7 +972,7 @@ Default CSS
     .register-form {
         background-color: #0e0e0e;
         border: 1px solid #000000;
-        
+
         form {
             .form-group {
                 label {
@@ -980,7 +982,7 @@ Default CSS
                     color: var(--white-color);
                     background-color: #000000;
                     border: 1px solid #000000;
-    
+
                     &::placeholder {
                         color: var(--white-color);
                     }
@@ -994,7 +996,7 @@ Default CSS
             .account-text {
                 span {
                     color: var(--white-color);
-    
+
                     a {
                         color: var(--main-color);
                     }
@@ -1009,7 +1011,7 @@ Default CSS
     .forgot-password-form {
         background-color: #0e0e0e;
         border: 1px solid #000000;
-        
+
         form {
             .form-group {
                 label {
@@ -1019,7 +1021,7 @@ Default CSS
                     color: var(--white-color);
                     background-color: #000000;
                     border: 1px solid #000000;
-    
+
                     &::placeholder {
                         color: var(--white-color);
                     }
@@ -1066,7 +1068,7 @@ Default CSS
                     color: var(--white-color);
                     background-color: #1F242F;
                     border: 1px solid #1F242F;
-    
+
                     &::placeholder {
                         color: var(--white-color);
                     }
@@ -1092,13 +1094,13 @@ Default CSS
                 color: var(--white-color);
                 background-color: #000000;
                 border: 1px solid #000000;
-    
+
                 &::placeholder {
                     color: var(--white-color);
                 }
                 &:focus {
                     border: 1px solid var(--main-color);
-    
+
                     &::placeholder {
                         color: transparent;
                     }
@@ -1108,7 +1110,7 @@ Default CSS
                 color: var(--white-color);
                 background-color: #000000;
                 border: 1px solid #000000;
-    
+
                 &:focus {
                     border: 1px solid var(--main-color);
                 }
@@ -1120,7 +1122,7 @@ Default CSS
 
                 a {
                     color: var(--white-color);
-    
+
                     &:hover {
                         color: var(--main-color);
                     }
@@ -1141,7 +1143,7 @@ Default CSS
             .quote-content {
                 background-color: #0e0e0e;
                 border: 1px solid #0e0e0e;
-    
+
                 p {
                     margin-bottom: 15px;
                 }
@@ -1167,7 +1169,7 @@ Default CSS
                     color: var(--white-color);
                     background-color: #0e0e0e;
                     border: 1px solid #0e0e0e;
-    
+
                     &::placeholder {
                         color: var(--white-color);
                     }
@@ -1190,11 +1192,11 @@ Default CSS
         .page-numbers {
             background-color: var(--black-color);
             color: var(--white-color);
-            
+
             &:hover, &.current {
                 color: var(--white-color);
                 background-color: var(--main-color);
-    
+
                 i {
                     color: var(--white-color);
                 }
@@ -1285,7 +1287,7 @@ Default CSS
             }
         }
     }
-        
+
     @media only screen and (min-width: 992px) and (max-width: 1199px) {
         .navbar-area {
             background-color: #050404;
