@@ -21,7 +21,7 @@ const Admin = superAdminDB();
 
 //LOADING ADMIN page
 app.get("/admin-login", function(req,res){
-  res.sendFile(__dirname + "/front_panel/login.html")
+  res.render("front_panel/login");
 })
 
 

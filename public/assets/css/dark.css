@@ -1315,7 +1315,7 @@ Default CSS
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 767px) and (max-width: 991px) {
   .theme-dark .navbar-area {
     background-color: #050404;
   }
