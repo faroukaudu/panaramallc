@@ -76,29 +76,6 @@ app.get("/fund/user/:id", function(req,res){
 
 
 
-
-// UserCodeBase-------------------------------
-// app.get("/", function(req,res){
-//
-// //   setTimeout(function() {
-// // console.log("starting now");
-// // console.log(passwrdResetToken.create(32));
-// // //console.log(token);
-// //
-// // }, 10000);
-//
-//   //console.log(User);
-// console.log(Date.now());
-// console.log(dates.myTime());
-// console.log(dates.myDate());
-//
-// // sendingMails.emailSent("fagzy99@gmail.com", "LinkedUpNOW", "Check the arrival time");
-//
-//
-// res.redirect("/home");
-//
-// })
-
 app.get("/login", function(req, res){
   res.render("dashboard/auth/sign-in", {error:""});
 })
@@ -123,7 +100,8 @@ app.post("/login", function(req, res){
         }else{
           res.send("User account has been blocked, Contact support");
         }
-      }else{
+      }
+      else{
         res.render("dashboard/auth/sign-in", {error:"Incorrect Password"});
       }
     }
@@ -320,24 +298,6 @@ app.get("/pwdtoken/:token", function(req, res){
   console.log(req.params.token);
   clearToken(req.params.token, "resetPassword", res);
 
-// User.find({"resettoken": {$elemMatch: {token: req.params.token}}}, function(err,doc){
-//   if(!err){
-//         res.render("dashboard/auth/lock-screen",{firstname:doc[0].firstname,
-//                                                 lastname:doc[0].lastname,
-//                                                 id:doc[0]._id});
-//     console.log(doc[0].resettoken[0].email);
-//   }
-// })
-//   User.aggregate([{$match: {"resettoken.token": req.params.token}}],
-//   function(err,foundT){
-//   if(foundT){
-//     res.render("dashboard/auth/lock-screen",{firstname:foundT[0].firstname,
-//                                             lastname:foundT[0].lastname,
-//                                             id:foundT[0]._id});
-//     console.log("Userfound");
-//
-//   }
-// })
 
 
 });

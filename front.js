@@ -28,8 +28,33 @@ app.get("/growth-capital", function(req,res){
   res.render('front_panel/growth-capital')
 })
 
+app.get("/real-estate", function(req,res){
+  res.render('front_panel/real-estate')
+})
+
+app.get("/esg", function(req,res){
+  res.render('front_panel/esg')
+})
+app.get("/csr", function(req,res){
+  res.render('front_panel/csr')
+})
+
+app.get("/diversity", function(req,res){
+  res.render('front_panel/diversity')
+})
+
+app.get("/contact", function(req,res){
+  res.render('front_panel/contact')
+})
+
+app.get("/strategy", function(req,res){
+  res.render('front_panel/strategy')
+})
+
 app.get("/contact.html", function(req,res){
   res.sendFile(__dirname + "/front_panel/contact.html");
 })
+
+
 
 module.exports = app;

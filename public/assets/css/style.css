@@ -1174,10 +1174,16 @@ Main Hero Area CSS
   display: none;
 } */
 
+
+
 .myvideo {
   min-width: 100%;
   min-height: 10%;
   position: absolute;
+}
+
+.move-left {
+  text-align: left;
 }
 .main-hero-area{
   /* background-image: url(../../assets/images/main-banner/money-count.mp4); */
@@ -2697,6 +2703,13 @@ Review Area CSS
 /*================================================
 Overview Area CSS
 =================================================*/
+.diversity {
+  background-image: url("/assets/images/diversity.jpg");
+  background-color: red;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
 .overview-area {
   background-color: var(--main-color);
   position: relative;
