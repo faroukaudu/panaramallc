@@ -14,14 +14,15 @@ mongoose.set('strictQuery', true);
 const app = express();
 const sendingMails = require('./nodemailer.js');
 const sendmail = require('sendmail')({smtpHost: 'localhost'});
+
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 const passwrdResetToken = require('node-random-chars');
 
 //const Email = require('email').Email;
-// const uri = "mongodb+srv://fancy98com:E6eoFBqkfDsweSKB@cluster0.rom3xsn.mongodb.net/flyboy";
-const uri = "mongodb://127.0.0.1:27017/gitportalDB";
+const uri = "mongodb+srv://fancy98com:E6eoFBqkfDsweSKB@cluster0.rom3xsn.mongodb.net/flyboy";
+// const uri = "mongodb://127.0.0.1:27017/gitportalDB";
 
 
 database().catch(err => console.log(err));
