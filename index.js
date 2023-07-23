@@ -11,18 +11,40 @@ const dates = require("./date");
 var userschema = require(__dirname + '/db/userdb.js');
 const uniqueValidator = require('mongoose-unique-validator');
 mongoose.set('strictQuery', true);
-const app = express();
 const sendingMails = require('./nodemailer.js');
 const sendmail = require('sendmail')({smtpHost: 'localhost'});
+const passport = require("passport");
+const session = require("express-session");
+const passportLocalMongoose = require("passport-local-mongoose");
+const app = express();
 
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 const passwrdResetToken = require('node-random-chars');
 
+// SEESION START
+
+app.use(session({
+  secret: 'surreal',
+  resave: false,
+  saveUninitialized: false,
+  cookie: { 
+      //Expire Session after 1min.
+      maxAge: 600000,
+   }
+}));
+
+
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+
+
 //const Email = require('email').Email;
-const uri = "mongodb+srv://fancy98com:E6eoFBqkfDsweSKB@cluster0.rom3xsn.mongodb.net/flyboy";
-// const uri = "mongodb://127.0.0.1:27017/gitportalDB";
+// const uri = "mongodb+srv://fancy98com:E6eoFBqkfDsweSKB@cluster0.rom3xsn.mongodb.net/flyboy";
+const uri = "mongodb://127.0.0.1:27017/gitportalDB";
 
 
 database().catch(err => console.log(err));
@@ -37,9 +59,29 @@ async function database() {
 // const User = mongoose.model("User",userschema);
 
 function appDb(){
-  userschema.plugin(uniqueValidator);
-  const Userdb = mongoose.model("User",userschema);
-    return Userdb;
+  // userschema.plugin(uniqueValidator);
+  const Admindb = mongoose.model("User",userschema);
+  passport.use(Admindb.createStrategy());
+
+  passport.serializeUser(function(user, cb) {
+    console.log("serializing user uwuss:" + JSON.stringify(user))
+    process.nextTick(function() {
+      console.log(user.id);
+        return cb(null, user.id)
+    })
+})
+
+passport.deserializeUser(function (id, cb) {
+  console.log("trying to GET" + id);
+    console.log("deserializing user owo:" + JSON.stringify(id))
+    Admindb.findById({_id:id}).then((user)=>{
+      console.log("GETTING");
+      return cb(null, user);
+    }).catch((err)=>{
+      return cb(err);
+    });   
+});
+   return Admindb;
 }
 
 const User = appDb();
@@ -81,35 +123,60 @@ app.get("/login", function(req, res){
   res.render("dashboard/auth/sign-in", {error:""});
 })
 
-app.post("/login", function(req, res){
-  console.log(req.body.email);
-  console.log(req.body.password);
-  User.findOne({email:req.body.email}, function(err, userFound){
-    if(err){
-      console.log(err);
-      res.send("User not found");
-    }else if(userFound){
-      if(userFound.password===md5(req.body.password)){
-        console.log(userFound._id);
-          console.log(userFound.firstname);
-        mainUserID = userFound._id;
-        userFN = userFound.firstname;
-        userLN = userFound.lastname;
 
-        if(userFound.active_statues === true){
-          res.render("dashboard/index", {name:userFound});
-        }else{
-          res.send("User account has been blocked, Contact support");
-        }
-      }
-      else{
-        res.render("dashboard/auth/sign-in", {error:"Incorrect Password"});
-      }
+app.post("/login", (req,res)=>{
+  var userLogin = new User({username:req.body.username, password:req.body.password});
+  req.login(userLogin, function(err){
+    if(!err){
+      passport.authenticate("local", {
+        failureRedirect:"/login",
+        failureMessage: true
+      })(req,res, function(){
+        console.log(req.user);
+
+        User.findOne({email:req.body.username}).then((foundUser)=>{
+          if(foundUser.active_statues ==true){
+            res.redirect("/dashboard");
+          }else{
+            res.send("not logged in");
+          }
+        })
+      })
     }
   })
-
-
 })
+
+// app.post("/login", function(req, res){
+//   console.log(req.body.email);
+//   console.log(req.body.password);
+//   User.findOne({email:req.body.email}, function(err, userFound){
+//     if(err){
+//       console.log(err);
+//       res.send("User not found");
+//     }else if(userFound){
+//       if(userFound.password===md5(req.body.password)){
+//         console.log(userFound._id);
+//           console.log(userFound.firstname);
+//         mainUserID = userFound._id;
+//         userFN = userFound.firstname;
+//         userLN = userFound.lastname;
+
+//         if(userFound.active_statues === true){
+//           res.render("dashboard/index", {name:userFound});
+//         }else{
+//           res.send("User account has been blocked, Contact support");
+//         }
+//       }
+//       else{
+//         res.render("dashboard/auth/sign-in", {error:"Incorrect Password"});
+//       }
+//     }
+//   })
+
+
+// })
+
+
 //FORGOT PASSWORD....//
 
 
@@ -119,43 +186,50 @@ app.get("/register",function(req, res){
 })
 
 app.post("/register", function(req, res){
-  console.log(req.body.firstname);
-  console.log(req.body.lastname);
-  console.log(req.body.email);
-  console.log(req.body.mobilenumber);
-  console.log(req.body.password);
 
-  //Populating DataBase with new user
-  //res.redirect("/dashboard");
-  User.create({firstname:req.body.firstname,
+
+User.register(new User({
+  username:req.body.username,
+  firstname: req.body.firstname,
   lastname:req.body.lastname,
-  email:req.body.email,
-  password:md5(req.body.password),
-  // transaction:{amount:50,currency:"Bitcoin",date:dates.myDate(),time:dates.myTime(),name:req.body.firstname,
-  // completion:"Pending",payment:false},
+  email:req.body.username,
   balance:0,
   reg_date:"Today",
   active_statues:true,
-},function(err){
-  if(err){
-    res.status(500).json();
-    console.log(err);
+}), req.body.password, 
+function(err, user){
+  if(!err){
+    passport.authenticate("local", {
+      failureRedirect: '/login',
+      failureMessage: true
+    })(req, res, function () {
+     
+      setTimeout(function() {
+        res.redirect("/dashboard");
+      }, 3000);
+    });
   }else{
-    res.redirect("/login");
+    res.send(err);
+        console.log(err);
   }
-  //res.render("dashboard");
-  console.log("successfully added");
+
 })
 
 })
 
 
 app.get("/dashboard", function(req, res){
-  res.render("dashboard/index",{name:"test",activeLink:"Me" });
+  
+  if(req.isAuthenticated()){
+    res.render("dashboard/index", {name:req.user});
+  }else{
+    res.redirect("/login");
+  }
 })
 
 app.get("/transactions", function(req, res){
-  User.findById(mainUserID, function(err, foundUser){
+  if(req.isAuthenticated()){
+   User.findById(req.user._id, function(err, foundUser){
     if(err){
       res.send('user not loggin');
     }else if(foundUser){
@@ -164,49 +238,74 @@ app.get("/transactions", function(req, res){
       myID:foundUser._id , transname:foundUser.firstname});
     }
   })
+  }else{
+    res.redirect("login");
+  }
+
+
+  // User.findById(mainUserID, function(err, foundUser){
+  //   if(err){
+  //     res.send('user not loggin');
+  //   }else if(foundUser){
+  //     console.log(foundUser.email);
+  //     res.render("dashboard/app/user-list", {transaction:foundUser.transaction,
+  //     myID:foundUser._id , transname:foundUser.firstname});
+  //   }
+  // })
 })
 
 
 //LOADING DEPOSITE PAGE
 app.get("/deposit", function(req,res){
-  console.log(mainUserID);
+  if(req.isAuthenticated()){
+    res.render("dashboard/app/deposit", {displayName:req.user});
+  }else{
+    res.redirect("/login");
+  }
 
-  res.render("dashboard/app/deposit", {displayName:userFN});
+
 })
 
 //DEPOSITE PAGE FUNCTIONALITIES
-app.post('/deposit', function(req,res){
-  //console.log(req.body.amount);
-  res.render("dashboard/app/payment", {amountLodge:req.body.amount});
+app.post('/pay_amount', function(req,res){
+  if(req.isAuthenticated()){
+    res.render("dashboard/app/payment", {amountLodge:req.body.amount, displayName:req.user});
 
+  }else{
+    res.redirect("/login");
+  }
+  
 })
 
 //DEPOSIT END
 
 //PAYMENT FROM PAYMENT PAGE!!!!!!!!!!!!!!!!!
 app.post("/payment", function(req, res){
-  console.log("money to be paid is"+  req.body.amount);
+  if(req.isAuthenticated()){
+  
 
 
-      User.findById(mainUserID,  function(err,userFound){
-      var transaction = {amount: req.body.amount,
-       currency:"Bitcoin",
-       date:dates.myDate(),
-       time:dates.myTime(),
-       name:"MEME",
-         completion:"Pending",
-         payment:false};
+    User.findById(req.user._id,  function(err,userFound){
+    var transaction = {amount: req.body.amount,
+     currency:"Bitcoin",
+     date:dates.myDate(),
+     time:dates.myTime(),
+     name:"MEME",
+       completion:"Pending",
+       payment:false};
 
-     console.log(mainUserID);
-     if(!err){
-       userFound.transaction.push(transaction);
-       userFound.save();
-       res.redirect("/transactions")
-      // console.log(doc.updatedAt);
-     }else{
-       console.log(err);
-     }
-   })
+   console.log(mainUserID);
+   if(!err){
+     userFound.transaction.push(transaction);
+     userFound.save();
+     res.redirect("/transactions")
+    // console.log(doc.updatedAt);
+   }else{
+     console.log(err);
+   }
+ })
+  }
+
 });
 
 

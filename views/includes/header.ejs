@@ -46,9 +46,9 @@
                 <ul class="navbar-nav iq-main-menu">
                     <li class="nav-item ">
                       <% if(activelink === "dashboard"){%>
-                          <a class="nav-link active" aria-current="page" href="/dashboard/index.html">
+                          <a class="nav-link active" aria-current="page" href="/dashboard">
                         <% }else{ %>
-                          <a class="nav-link" aria-current="page" href="/dashboard/index.html">
+                          <a class="nav-link" aria-current="page" href="/dashboard">
                         <% } %>
 
                             <i class="icon">
@@ -156,7 +156,7 @@
 
         <nav class="nav navbar navbar-expand-lg navbar-light iq-navbar border-bottom">
           <div class="container-fluid navbar-inner">
-            <a href="../dashboard/index.html" class="navbar-brand">
+            <a href="/dashboard" class="navbar-brand">
             </a>
             <div class="sidebar-toggle" data-toggle="sidebar" data-active="true">
                 <i class="icon">
@@ -297,7 +297,7 @@
                   <a class="nav-link py-0 d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <img src="/dashboard-assets/images/avatars/01.png" alt="User-Profile" class="img-fluid avatar avatar-50 avatar-rounded">
                     <div class="caption ms-3 ">
-                        <h6 class="mb-0 caption-title"><%=username %></h6>
+                        <h6 class="mb-0 caption-title"><%=username.firstname %></h6>
                         <p class="mb-0 caption-sub-title">Manager</p>
                     </div>
                   </a>
