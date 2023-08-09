@@ -20,6 +20,14 @@ app.get("/value-creation", function(req,res){
   res.render('front_panel/value-creation')
 })
 
+app.get("/bio-tech", function(req,res){
+  res.render('front_panel/bio')
+})
+
+app.get("/renewable-energy", function(req,res){
+  res.render('front_panel/renewable-energy')
+})
+
 app.get("/private-equity", function(req,res){
   res.render('front_panel/private-equity')
 })
