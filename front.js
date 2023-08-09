@@ -21,7 +21,7 @@ app.get("/value-creation", function(req,res){
 })
 
 app.get("/bio-tech", function(req,res){
-  res.render('front_panel/bio')
+  res.render('front_panel/Bio')
 })
 
 app.get("/renewable-energy", function(req,res){
