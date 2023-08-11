@@ -40,11 +40,11 @@ app.get("/real-estate", function(req,res){
   res.render('front_panel/real-estate')
 })
 
-app.get("/esg", function(req,res){
-  res.render('front_panel/esg')
-})
 app.get("/csr", function(req,res){
   res.render('front_panel/csr')
+})
+app.get("/esg", function(req,res){
+  res.render('front_panel/esg')
 })
 
 app.get("/diversity", function(req,res){
