@@ -41,7 +41,7 @@ app.get("/real-estate", function(req,res){
 })
 
 app.get("/csr", function(req,res){
-  res.render('front_panel/csr');
+  res.render('front_panel/csr-page');
 })
 app.get("/esg", function(req,res){
   res.render('front_panel/esg')
