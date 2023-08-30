@@ -59,6 +59,10 @@ app.get("/strategy", function(req,res){
   res.render('front_panel/strategy')
 })
 
+app.get("/portfolio", function(req,res){
+  res.render("front_panel/portfolio")
+})
+
 app.get("/contact.html", function(req,res){
   res.sendFile(__dirname + "/front_panel/contact.html");
 })

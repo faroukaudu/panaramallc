@@ -1,7 +1,11 @@
 /*================================================
 Default CSS
 =================================================*/
-
+.tin{
+  color:orange;
+  font-weight: lighter;
+  font-size: 15px;
+}
 .hero-text{
   font-size: 50px;
   font-weight:normal;
