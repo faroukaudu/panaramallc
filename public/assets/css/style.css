@@ -1197,6 +1197,18 @@ Main Hero Area CSS
   padding-top: 100px;
   padding-bottom: 10%;
 }
+.main-hero-areas{
+  /* background-image: url(../../assets/images/main-banner/money-count.mp4); */
+  /* background-image: url(../../assets/images/main-banner/banner-bg.jpg); */
+  background-position: center right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  padding-top: 100px;
+  padding-bottom: 10%;
+}
 
 
 

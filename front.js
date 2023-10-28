@@ -68,5 +68,18 @@ app.get("/contact.html", function(req,res){
 })
 
 
+app.get("/terms", function(req,res){
+  res.render("front_panel/termsncondition");
+})
+
+app.get("/privacy-policy", function(req,res){
+  res.render("front_panel/privacy-policy");
+})
+
+app.get("/fraudalert", function(req,res){
+  res.render("front_panel/fraud-alert");
+})
+
+
 
 module.exports = app;
