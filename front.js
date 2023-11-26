@@ -80,6 +80,33 @@ app.get("/fraudalert", function(req,res){
   res.render("front_panel/fraud-alert");
 })
 
+app.get("/private-client", function(req,res){
+  res.render("front_panel/private");
+})
+
+app.get("/institutional-investment", function(req,res){
+  res.render("front_panel/institutional");
+})
+
+app.get("/retirement-plan", function(req,res){
+  res.render("front_panel/retirement");
+})
+
+app.get("/investment-planning", function(req,res){
+  res.render("front_panel/investment");
+})
+
+app.get("/growth", function(req,res){
+  res.render("front_panel/growth");
+})
+app.get("/global-impact", function(req,res){
+  res.render("front_panel/impact");
+})
+
+app.get("/why-choose-us", function(req,res){
+  res.render("front_panel/why");
+})
+
 
 
 module.exports = app;

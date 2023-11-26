@@ -256,6 +256,15 @@ app.get("/transactions", function(req, res){
 
 
 //LOADING DEPOSITE PAGE
+app.get("/plan-pay", (req,res)=>{
+  if(req.isAuthenticated()){
+    res.render("dashboard/app/plansub", {displayName:req.user});
+  }else{
+    res.redirect("/login");
+  }
+})
+
+
 app.get("/deposit", function(req,res){
   if(req.isAuthenticated()){
     res.render("dashboard/app/deposit", {displayName:req.user});
