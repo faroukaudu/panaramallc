@@ -3,7 +3,9 @@ mongoose.set('strictQuery', true);
 
 
 // const uri = "mongodb://127.0.0.1:27017/gitportalDB";
-
+async function database() {
+  await mongoose.connect(uri);
+}
 
 var conn = mongoose.connection;
 

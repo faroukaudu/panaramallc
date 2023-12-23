@@ -190,7 +190,7 @@ app.get("/register/:referralCode",function(req, res){
       res.render("dashboard/auth/sign-up", {name:user.firstname, referralcode:user.referral});
     }else{
       console.log("NOt seeing");
-      res.render("dashboard/auth/sign-up", {name:"No Referral"});
+      res.render("dashboard/auth/sign-up", {name:"No Referral", referralcode:"No Referral"});
     }
   })
 
