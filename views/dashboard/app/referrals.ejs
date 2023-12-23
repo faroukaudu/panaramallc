@@ -1,12 +1,12 @@
-<%- include("../../includes/header", {username: transname, activelink:"depositlist",referralCode:transname}); -%>
+<%- include("../../includes/header", {username: userMe, activelink:"depositlist",referralCode:userMe.referral}); -%>
       <div class="container-fluid content-inner pb-0">
 <div>
    <div class="row">
       <div class="col-sm-12">
          <div class="card">
            <div class="card-header">
-               <h4 class="card-title text-white">Basic Datatable</h4>
-               <!-- <p><%= myID %></p> -->
+               <h4 class="card-title text-white">Referrals</h4>
+               
             </div>
             <div class="d-flex mt-3 ms-4 me-4 justify-content-between">
               <select class="form-select-custom" style="padding:10px 15px 10px 15px;color:#fff;background-color:#202022;background-repeat: no-repeat;
@@ -29,35 +29,32 @@
              <div class="card-body">
                  <div class="table-responsive">
                 <table class="table">
-                  <% if(transaction.length ===0){ %>
-                    <h3>No Payment has been made yet</h3>
-                    <a href="/deposit"><p>Click here to make payment</p></a>
-                  <% }else{  %>
+                 
                    <thead class="">
                                             <tr>
                                                 <th>Name</th>
-                                                <th>Currency</th>
-                                                <th>Amount</th>
+                                                <th>Email</th>
+                                                <!-- <th>Amount</th>
                                                 <th>date</th>
-                                                <th>time</th>
-                                                <th>Status</th>
+                                                <th>time</th> -->
+                                                <th>Reg. Date </th>
                                             </tr>
                                         </thead>
                                         <tbody>
-
-
-                                          <% transaction.forEach(function(usertran){ %>
-                                            <tr>
-                                                <td><%= usertran.name %></td>
-                                                <td><%= usertran.currency %></td>
-                                                <td>$<%= usertran.amount %></td>
-                                                <td><%= usertran.date %></td>
-                                                <td><%= usertran.time %></td>
-                                                <td><%= usertran.completion%></td>
-
+                                          
+                                            <%userInfo.forEach(function(userFound){ %>
+                                              <tr>
+                                              <%if(userMe.referral === userFound.referee){ %>
+                                                <td><%= userFound.firstname+" "+userFound.lastname%></td>
+                                                <td><%= userFound.username%></td>
+                                                <td><%= userFound.createdAt%></td>
+                                              <% }%>
                                             </tr>
+                                            <% })%>
+                                         
 
-                                          <% })} %>
+
+                                          
 
 
 

@@ -120,6 +120,7 @@ app.get("/fund/user/:id", function(req,res){
 
 
 app.get("/login", function(req, res){
+
   res.render("dashboard/auth/sign-in", {error:""});
 })
 
@@ -180,12 +181,33 @@ app.post("/login", (req,res)=>{
 //FORGOT PASSWORD....//
 
 
-app.get("/register",function(req, res){
+app.get("/register/:referralCode",function(req, res){
+  console.log(req.params.referralCode);
+  User.findOne({referral:req.params.referralCode}, function(err,user){
+    if(user){
+      console.log("I am seeing");
+      console.log(user);
+      res.render("dashboard/auth/sign-up", {name:user.firstname, referralcode:user.referral});
+    }else{
+      console.log("NOt seeing");
+      res.render("dashboard/auth/sign-up", {name:"No Referral"});
+    }
+  })
 
-  res.render("dashboard/auth/sign-up");
+  
 })
 
 app.post("/register", function(req, res){
+  var generatedTokenz = passwrdResetToken.create(5);
+  console.log(req.body.referee);
+  var referralCode;
+  if(req.body.referee !== "No Referral"){
+    referralCode = req.body.referee;
+  }else{
+    referralCode="";
+  }
+
+  console.log("the refree code is:::"+referralCode);
 
 
 User.register(new User({
@@ -195,6 +217,8 @@ User.register(new User({
   email:req.body.username,
   balance:0,
   reg_date:"Today",
+  referral:generatedTokenz,
+  referee:referralCode,
   active_statues:true,
 }), req.body.password, 
 function(err, user){
@@ -434,6 +458,20 @@ app.post("/newpwd", function(req,res){
 app.get("/profile", function(req,res){
   res.render("dashboard/app//user-profile", {displayName:"profile"});
 })
+
+
+// REFERRALS PAGE
+app.get("/referrals", (req,res)=>{
+  if(req.isAuthenticated()){
+    console.log(req.user);
+    User.find({}).then((users)=>{
+      res.render("dashboard/app/referrals", {userInfo:users, userMe:req.user});
+    });
+  }else{
+    res.redirect("/login");
+  }
+  
+});
 
 
 

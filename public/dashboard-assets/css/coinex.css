@@ -266,9 +266,98 @@ small, .small {
 
 
 
+/* header referral link form */
 
+.referral-link {
+  font-size: 20px;
 
+    /* margin: auto; */
 
+    width: 55%;
+    padding: 0.3rem 0.7rem;
+    font-size: 0.7rem;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #BFBFBF;
+    background-color: #202022;
+    background-clip: padding-box;
+    border: 1px solid #313135;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 0 0;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
+    @media (prefers-reduced-motion: reduce) {
+      .form-control {
+        transition: none; } }
+    .form-control[type="file"] {
+      overflow: hidden; }
+      .form-control[type="file"]:not(:disabled):not([readonly]) {
+        cursor: pointer; }
+    .form-control:focus {
+      color: #BFBFBF;
+      background-color: #202022;
+      border-color: #FF971D;
+      outline: 0;
+      box-shadow: 0 0 0 0, 0 0 0; }
+    .form-control::-webkit-date-and-time-value {
+      height: 1.5em; }
+    .form-control::-webkit-input-placeholder {
+      color: #4A4A4F;
+      opacity: 1; }
+    .form-control::-moz-placeholder {
+      color: #4A4A4F;
+      opacity: 1; }
+    .form-control::-ms-input-placeholder {
+      color: #4A4A4F;
+      opacity: 1; }
+    .form-control::placeholder {
+      color: #4A4A4F;
+      opacity: 1; }
+    .form-control:disabled, .form-control[readonly] {
+      background-color: #4A4A4F;
+      opacity: 1; }
+    .form-control::file-selector-button {
+      padding: 0.5rem 1rem;
+      margin: -0.5rem -1rem;
+      -webkit-margin-end: 1rem;
+         -moz-margin-end: 1rem;
+              margin-inline-end: 1rem;
+      color: #BFBFBF;
+      background-color: #202022;
+      pointer-events: none;
+      border-color: inherit;
+      border-style: solid;
+      border-width: 0;
+      border-inline-end-width: 1px;
+      border-radius: 0;
+      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
+      @media (prefers-reduced-motion: reduce) {
+        .form-control::file-selector-button {
+          transition: none; } }
+    .form-control:hover:not(:disabled):not([readonly])::file-selector-button {
+      background-color: #1e1e20; }
+    .form-control::-webkit-file-upload-button {
+      padding: 0.5rem 1rem;
+      margin: -0.5rem -1rem;
+      -webkit-margin-end: 1rem;
+              margin-inline-end: 1rem;
+      color: #BFBFBF;
+      background-color: #202022;
+      pointer-events: none;
+      border-color: inherit;
+      border-style: solid;
+      border-width: 0;
+      border-inline-end-width: 1px;
+      border-radius: 0;
+      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
+      @media (prefers-reduced-motion: reduce) {
+        .form-control::-webkit-file-upload-button {
+          transition: none; } }
+    .form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
+      background-color: #1e1e20;
+}
 
 
 

@@ -28,7 +28,11 @@
                   <div class="auth-form">
                         <h2 class="text-center mb-4">Sign Up</h2>
                         <form method="post" action="/register">
-                           <p>Create a new Account</p>
+                           <% if(name){ %>
+                              <p>Referee: <b><%= name%></b></p>
+                           <% }else{ %>
+                              <p>Referee: <b><%= name%></b></p>
+                           <% }%>
                            <div class="row">
                               <div class="col-md-6 mb-4">
                                   <div class="form-floating mb-3">
@@ -76,6 +80,7 @@
                               <label class="ms-1 form-check-label" for="agree">I agree with the terms of
                                  use</label>
                            </div>
+                           <input type="hidden" name="referee" value="<%=referralcode%>">
                            <div class="text-center">
                               <button type="sunmit" class="btn btn-primary">Sign Up</button>
                            </div>
