@@ -95,7 +95,7 @@ app.get("/admin", function(req, res){
 //LOADING ADMIN page END
 
 
-app.get("/admin/incoming-depo", function(req,res){
+app.get("/incoming-depo", function(req,res){
   console.log("working here");
   User.find({}, function(err, foundData){
     if(err){

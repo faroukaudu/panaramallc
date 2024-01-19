@@ -43,8 +43,8 @@ app.use(passport.session());
 
 
 //const Email = require('email').Email;
-const uri = "mongodb+srv://fancy98com:E6eoFBqkfDsweSKB@cluster0.rom3xsn.mongodb.net/flyboy";
-// const uri = "mongodb://127.0.0.1:27017/gitportalDB";
+// const uri = "mongodb+srv://fancy98com:E6eoFBqkfDsweSKB@cluster0.rom3xsn.mongodb.net/flyboy";
+const uri = "mongodb://127.0.0.1:27017/gitportalDB";
 
 
 database().catch(err => console.log(err));
@@ -471,6 +471,16 @@ app.get("/referrals", (req,res)=>{
     res.redirect("/login");
   }
   
+});
+
+app.get("/logout", (req,res)=>{
+  req.logout(function(err){
+    if(err){
+      console.log(err);
+    }else{
+      res.redirect("/login");
+    }
+  })
 });
 
 
