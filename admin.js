@@ -171,6 +171,16 @@ app.post("/status", function(req,res){
 });// USERS STATUS FUNCTIONALITIES END
 
 
+app.get("/edit-user", (req,res)=>{
+  if(req.isAuthenticated()){
+    // console.log(req.user);
+    res.render("dashboard/app/user-profile-edit", {userInfo:req.user});
+  }else{
+    res.redirect("login");
+  }
+})
+
+
 
 
 
