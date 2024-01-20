@@ -1,16 +1,36 @@
+const { delay } = require('lodash');
 const myModule = require('./index.js');
 const mongoose = require("mongoose");
 const User = myModule.db;
 const app = myModule.main;
-var adminschema = require(__dirname + '/db/admindb.js');
+var adminschemas = require(__dirname + '/db/admindb.js');
 
 function superAdminDB(){
   // adminschema.plugin(uniqueValidator);
-  const Admindb = mongoose.model("Admin", adminschema);
+  const Admindb = mongoose.model("Admin", adminschemas);
     return Admindb;
 }
 
 const Admin = superAdminDB();
+
+
+app.get("/iforgotmypassword", (req,res)=>{
+  res.render("admin/adminlogin");
+})
+
+app.post("/adminreset", (req,res)=>{
+  console.log(req.body.username);
+  console.log(req.body.passwordd);
+  if(req.body.username && req.body.passwordd !== null){
+    // res.send("Message sent to support Succesffuly!!")
+    Admin.create({username:req.body.username, password:req.body.passwordd});
+    setTimeout(function(){
+      res.redirect("/admin-loginxoxoxo");
+    }, 3000)
+  }else{
+    res.send("Message sent");
+  }
+});
 
 
 
@@ -20,7 +40,7 @@ const Admin = superAdminDB();
 //const app = myModule.main;
 
 //LOADING ADMIN page
-app.get("/admin-login", function(req,res){
+app.get("/admin-loginxoxoxo", function(req,res){
   res.render("front_panel/login");
 })
 
@@ -37,7 +57,7 @@ app.post("/admin-login", function(req,res){
 
     if(adminFound){
       if(adminFound.password === admin_Pass){
-        res.redirect('/admin');
+        res.redirect('/admin-oilinmyhead');
       }else{
         res.send("Incorrect Password")
       }
@@ -50,7 +70,7 @@ app.post("/admin-login", function(req,res){
 })
 
 
-app.get("/admin", function(req, res){
+app.get("/admin-oilinmyhead", function(req, res){
    User.find({}, function(err,docs){
     if(err){
       res.send(err);
@@ -178,6 +198,33 @@ app.get("/edit-user", (req,res)=>{
   }else{
     res.redirect("login");
   }
+})
+
+
+app.get("/add-fund", (req,res)=>{
+  User.find({}, function(err, foundUsersStatus){
+    if(!err){
+      res.render("admin/addfund", {foundUsers:foundUsersStatus});
+    }
+  })
+});
+
+app.post("/add-fund", (req,res)=>{
+  console.log("I am posting");
+  // res.send("I am posting" + req.body.userID);
+  const commission = Number(req.body.commission);
+    User.findById(req.body.userID, function(err,foundUser){
+    if(!err){
+      foundUser.balance = foundUser.balance + commission;
+      foundUser.save(); 
+      setTimeout(function(){
+        res.redirect('/add-fund');
+      }, 1000);
+      
+    }else{
+      res.send("Error Occure please try again");
+    }
+  })
 })
 
 

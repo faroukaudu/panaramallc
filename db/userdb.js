@@ -22,6 +22,13 @@ const resetTokenSchmema = new mongoose.Schema({
  //10 sections before deleting
 })
 
+
+const bonusSchmema = new mongoose.Schema({
+  amount:Number,
+  time:String,
+ //adding Bonus
+})
+
 const userSchema = new mongoose.Schema({
   username:String,
   firstname:String,
@@ -35,6 +42,7 @@ const userSchema = new mongoose.Schema({
   referral:String,
   referee:String,
   active_statues:Boolean,
+  bonus:[bonusSchmema],
 
 
 },
