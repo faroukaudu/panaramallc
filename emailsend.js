@@ -21,7 +21,7 @@ function emailTemplate({username:name, email:email}){
 }
 
 // var live = "http://localhost:2000";
-var live = "https://enzymesmillionaireclub.com";
+var live = "https://panaramallc.com";
 
 function resetPassword({email:userEmail, userID:id,}){
     try {sendingMails.emailSent({sendTo:userEmail, title:"Password Reset",
