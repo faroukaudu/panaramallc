@@ -160,6 +160,7 @@ app.post("/approved", function(req,res){
 })
 });
 
+
 //USERS STATUS page
 app.get("/status", function(req,res){
   User.find({}, function(err, foundUsersStatus){
@@ -189,6 +190,8 @@ app.post("/status", function(req,res){
     }
   });
 });// USERS STATUS FUNCTIONALITIES END
+
+
 
 
 app.get("/edit-user", (req,res)=>{
@@ -226,6 +229,27 @@ app.post("/add-fund", (req,res)=>{
     }
   })
 })
+
+
+//USERS STATUS page
+app.get("/delete-user", function(req,res){
+  User.find({}, function(err, userToDelete){
+    if(!err){
+      res.render("admin/delete-user", {foundUsers:userToDelete});
+    }
+  })
+
+})
+
+//USERS STATUS FUNTIONALITIES PAGE
+app.post("/delete-user", function(req,res){
+  const statusID = req.body.userID
+  User.findByIdAndDelete(statusID).then((deleted)=>{
+    res.redirect("/delete-user");
+  }).catch((err)=>{
+    res.send(err);
+  })
+});// USERS STATUS FUNCTIONALITIES END
 
 
 

@@ -4,20 +4,24 @@
 
 const nodemailer = require('nodemailer');
 
-async function emailSent(to, subject, msg){
+async function emailSent({sendTo:to, title:subject, message:msg, template:html, emailType:emailType}){
   console.log(to);
   console.log(subject);
   console.log(msg);
   const transporter = nodemailer.createTransport({
-    host:"localhost",
-    tls: {
-    rejectUnauthorized: false
-  },
-    service: "Hotmail",
-    port: 25,
+    host:"smtp.zoho.com",
+    // host:"localhost",
+    port: 465,
+    secure: true,
+  //   tls: {
+  //   rejectUnauthorized: true,
+  //   servername:"gmail.com"
+  // },
+    service: "zoho",
+    
     auth: {
-      user: "otps-verify@outlook.com",
-      pass: "12345!@Abcde"
+      user: "support@panaramallc.com",
+      pass: "Hitsuppport@247"
     }
   });
 
@@ -30,22 +34,46 @@ async function emailSent(to, subject, msg){
 });
 
   const option = {
-    from:"otps-verify@outlook.com",
+    from:"Support@panaramallc.com",
+    // replyTo: 'noreply.admin@panaramallc',
     to: to,
     subject:subject,
-    text:"Click this link to reset your password.."+ " " +"https://localhost:2000/pwdtoken/"+msg,
-    // text:"Click this link to reset your password.."+ " " +"https://stingray-app-lgdmb.ondigitalocean.app/pwdtoken/"+msg,
-
+    text:msg,
+    //text:"Click this link to reset your password.."+ " " +"https://localhost:2000/pwdtoken/"+msg,
+    // text:"Click this link to reset your password.."+ " " +"https://stingray-app-lgdmb.ondigitalocean.app/pwdtoken/",
+    html:html 
   };
 
-  let info = await transporter.sendMail(option, function(err, info){
-    if(err){
-      console.log(err);
-    }else{
-      console.log("send "+ info);
-    }
-    //console.log("send "+ info);c
-  });
+  const reset = {
+    from:"Support@panaramallc.com",
+    // replyTo: 'noreply.admin@panaramallc',
+    to: to,
+    subject:subject,
+    text:msg,
+    //text:"Click this link to reset your password.."+ " " +"https://localhost:2000/pwdtoken/"+msg,
+    // text:"Click this link to reset your password.."+ " " +"https://stingray-app-lgdmb.ondigitalocean.app/pwdtoken/",
+    // html:html 
+  };
+
+  if(emailType === "registration successful"){
+    let info = transporter.sendMail(option, function(err, info){
+      if(err){
+        console.log(err);
+      }else{
+        console.log("send "+ info);
+      }
+      //console.log("send "+ info);c
+    });
+  }else if(emailType === "Password Reset"){
+    let passReset = transporter.sendMail(reset, function(err, info){
+      if(err){
+        console.log(err);
+      }else{
+        console.log("send "+ info);
+      }
+      //console.log("send "+ info);c
+    });
+  }
 }
 //emailSent("fagzy99@gmail.com", "Online", "Check me wella");
  module.exports = {emailSent};

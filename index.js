@@ -23,6 +23,10 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 const passwrdResetToken = require('node-random-chars');
 
+const emailsender = require("./emailsend.js");
+const resetPassMail = emailsender.passwordResetMail;
+const welcomeMail = emailsender.registrationMail;
+
 // SEESION START
 
 app.use(session({
@@ -208,6 +212,8 @@ app.post("/register", function(req, res){
   }
 
   console.log("the refree code is:::"+referralCode);
+  const fullName =req.body.firstname+" "+req.body.lastname;
+
 
 
 User.register(new User({
@@ -227,6 +233,7 @@ function(err, user){
       failureRedirect: '/login',
       failureMessage: true
     })(req, res, function () {
+      welcomeMail({username:fullName, email:req.body.username});   
      
       setTimeout(function() {
         res.redirect("/dashboard");
@@ -351,33 +358,53 @@ app.get("/reset", function(req,res){
 app.post("/resetpwd",  function(req, res){
   console.log(req.body.resetemail);
 //GENERATE TOKEN
-  var generatedToken = passwrdResetToken.create(32);
-
-User.findOne({email:req.body.resetemail}, async function(err, foundEmail){
-  if(!err){
-    if(foundEmail){
-      foundEmail.resettoken.pop();
-      var newToken = {token:generatedToken,
-                      email:foundEmail.email,
-                      time:dates.myTime()+" "+dates.myDate()};
-      foundEmail.resettoken.push(newToken);
-      foundEmail.save();
-      console.log("User found and the name is"+ foundEmail.firstname);
-      sendingMails.emailSent(foundEmail.email, "Reset Password", generatedToken);
-      res.render("dashboard/auth/confirm-mail", {email:foundEmail.email});
-      //DELAY B4 EMAIL LINK EXPIRES
+  // var generatedToken = passwrdResetToken.create(32);
+  User.find({email:(req.body.resetemail)}).then((userfound)=>{
+    if(userfound){
+      resetPassMail({email:userfound[0].email, userID:userfound[0].id});
       setTimeout(function() {
-    console.log("Email Link Expired");
-    clearToken(generatedToken,"tokenExpired",res);
-
-  }, 50000);
-    }else if(!foundEmail){
-      console.log("User does not exist");
+        // res.render("userdash/animations/emailsent");  
+        res.render("dashboard/auth/confirm-mail", {email:userfound[0].email}); //TODO: call the fun from email send         
+    }, 2000);
+      
+    
+    }else{
+      // res.render("userdash/animations/usererr");
+      res.send("User not found!"); 
+      console.log("no User found");
     }
-  }else{
-    console.log(err);
-  }
-})
+
+  }).catch((err)=>{
+    console.log("NOT userfound");
+    // res.render("userdash/animations/usererr",{errorMsg:"Email not found !!!."}); 
+  })
+
+
+// User.findOne({email:req.body.resetemail}, async function(err, foundEmail){
+//   if(!err){
+//     if(foundEmail){
+//       foundEmail.resettoken.pop();
+//       var newToken = {token:generatedToken,
+//                       email:foundEmail.email,
+//                       time:dates.myTime()+" "+dates.myDate()};
+//       foundEmail.resettoken.push(newToken);
+//       foundEmail.save();
+//       console.log("User found and the name is"+ foundEmail.firstname);
+//       sendingMails.emailSent(foundEmail.email, "Reset Password", generatedToken);
+//       res.render("dashboard/auth/confirm-mail", {email:foundEmail.email});
+//       //DELAY B4 EMAIL LINK EXPIRES
+//       setTimeout(function() {
+//     console.log("Email Link Expired");
+//     clearToken(generatedToken,"tokenExpired",res);
+
+//   }, 50000);
+//     }else if(!foundEmail){
+//       console.log("User does not exist");
+//     }
+//   }else{
+//     console.log(err);
+//   }
+// })
 
 })
 //RESET PASSWORD END///
@@ -398,30 +425,30 @@ app.get("/pwdtoken", function(req, res){
 
 
 });
-function clearToken (token, opp, res){
-  User.findOne({"resettoken": {$elemMatch: {token: token}}}, function(err,doc){
-    if(doc){
-      if(opp === "resetPassword"){
+// function clearToken (token, opp, res){
+//   User.findOne({"resettoken": {$elemMatch: {token: token}}}, function(err,doc){
+//     if(doc){
+//       if(opp === "resetPassword"){
 
-      res.render("dashboard/auth/lock-screen",{firstname:doc.firstname,
-                                                  lastname:doc.lastname,
-                                                    id:doc._id});
-          console.log(doc.resettoken.length);
-          //Clearing Token array after Used & Save!!
-          doc.resettoken = [];
-          doc.save();
-      }else if(opp === "tokenExpired"){
-        //Clearing Token array after Expire
-        doc.resettoken =[];
-        doc.save();
-      }
+//       res.render("dashboard/auth/lock-screen",{firstname:doc.firstname,
+//                                                   lastname:doc.lastname,
+//                                                     id:doc._id});
+//           console.log(doc.resettoken.length);
+//           //Clearing Token array after Used & Save!!
+//           doc.resettoken = [];
+//           doc.save();
+//       }else if(opp === "tokenExpired"){
+//         //Clearing Token array after Expire
+//         doc.resettoken =[];
+//         doc.save();
+//       }
 
-    }else{
-      res.write("Link Has expired or has been used!!!");
-    }
-  });
+//     }else{
+//       res.write("Link Has expired or has been used!!!");
+//     }
+//   });
 
-}
+// }
 
 //TOKEN VERIFICATION END............
 
@@ -485,8 +512,52 @@ app.get("/logout", (req,res)=>{
 
 
 
+app.get("/panaramall/:id", (req,res)=>{
+  var id = req.params.id.slice(2, -7);
+  console.log(id);
+  User.findById(id).then((doc)=>{
+    if(doc){
+      res.render("dashboard/auth/lock-screen",{firstname:doc.firstname,
+        lastname:doc.lastname,
+          id:doc._id});
+      // res.send("userfound")
+    }else{
+      res.send("User not found");
+    }
+  }).catch((err)=>{
+    res.send("User not found,please try again or contact support -->"  +err);
+  })
+  // id.slice()
 
+  
+});
 
+app.post ("/update-pass", async (req,res)=>{
+
+  await User.findById(req.body.userid).then((user)=>{
+    console.log(user);
+    if(!user){
+      res.send("user not found, Contact support");
+    }else if (user){
+      console.log(user.email);
+      user.setPassword(req.body.passwordone, function(err,done){
+        if(err){
+          res.send(err)
+        }else if (done){
+          user.save();
+          res.render("dashboard/auth/sign-in");
+          console.log("Its cool");
+        }
+      });
+      
+      // res.render("userdash/animations/emailsent");
+
+        
+    }
+  }).catch((err)=>{
+    res.send(err)
+  })
+})
 
 
 
