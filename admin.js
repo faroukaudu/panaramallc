@@ -1,6 +1,7 @@
 const { delay } = require('lodash');
 const myModule = require('./index.js');
 const mongoose = require("mongoose");
+const { log } = require('handlebars/runtime');
 const User = myModule.db;
 const app = myModule.main;
 var adminschemas = require(__dirname + '/db/admindb.js');
@@ -191,7 +192,14 @@ app.post("/status", function(req,res){
   });
 });// USERS STATUS FUNCTIONALITIES END
 
-
+app.get("/userinfo",(req,res)=>{
+  if(req.isAuthenticated()){
+    console.log(req.user);
+    res.render("dashboard/app/userinfodisplay", {userInfo:req.user});
+  }else{
+    res.redirect("/login");
+  }
+})
 
 
 app.get("/edit-user", (req,res)=>{
@@ -201,6 +209,33 @@ app.get("/edit-user", (req,res)=>{
   }else{
     res.redirect("login");
   }
+})
+
+app.post("/update-info",(req,res)=>{
+  var city = req.body.city;
+  var sex = req.body.sex;
+  var dob =req.body.dob;
+  var marital = req.body.marital;
+  var age = req.body.age;
+  var country = req.body.country;
+  var state = req.body.state;
+  var address =  req.body.address;
+  var id = req.body.id;
+  console.log(city,sex,dob,marital,age,country,state,address,id);
+  var updateInfo = {
+    mycity:city,mysex:sex,mydob:dob,mymarital:marital,
+    myage:age, mycountry:country,mystate:state,myaddress:address
+
+  }
+  User.findOneAndUpdate({_id:id}, updateInfo, function(err){
+    if(!err){
+      res.redirect("/userinfo");
+    }else{
+      "err"+ err
+    }
+  })
+
+
 })
 
 

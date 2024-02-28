@@ -226,6 +226,16 @@ User.register(new User({
   referral:generatedTokenz,
   referee:referralCode,
   active_statues:true,
+  mycity:"null",
+  mysex:"null",
+  mydob:"null",
+  mymarital:"null",
+  myage:"null",
+  mycountry:"null",
+  mystate:"null",
+  myaddress:"null",
+
+
 }), req.body.password, 
 function(err, user){
   if(!err){

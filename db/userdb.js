@@ -42,6 +42,15 @@ const userSchema = new mongoose.Schema({
   referral:String,
   referee:String,
   active_statues:Boolean,
+  mycity:String,
+  mysex:String,
+  mydob:String,
+  mymarital:String,
+  myage:String,
+  mycountry:String,
+  mystate:String,
+  myaddress:String,
+
   bonus:[bonusSchmema],
 
 
