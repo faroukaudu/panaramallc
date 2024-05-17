@@ -50,6 +50,11 @@ const userSchema = new mongoose.Schema({
   mycountry:String,
   mystate:String,
   myaddress:String,
+  profit:[Number],
+  withdrawals:[Number],
+  withdraws:[{amount:Number, wallet:String,
+    approved:Boolean,
+    time:String}],
 
   bonus:[bonusSchmema],
 

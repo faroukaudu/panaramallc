@@ -286,7 +286,21 @@ app.post("/delete-user", function(req,res){
   })
 });// USERS STATUS FUNCTIONALITIES END
 
-
+// Withdrwals Request by Admin
+app.get("/a-withdraw", (req,res)=>{
+  User.find().then((userRequest)=>{
+    var userShow = [];
+    userRequest.forEach(function(users){
+      if(users.withdraws.length>0){
+        console.log("Glory");
+        userShow.push(users);
+      }
+    });
+    res.render("admin/withdrawals", {foundUsers:userShow});
+  }).catch((err)=>{
+    res.send(err)
+  });
+})
 
 
 

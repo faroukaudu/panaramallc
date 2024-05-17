@@ -107,6 +107,11 @@ app.get("/why-choose-us", function(req,res){
   res.render("front_panel/why");
 })
 
+app.get("/stock-market", function(req,res){
+  res.render("front_panel/stock market");
+})
+
+
 
 
 module.exports = app;

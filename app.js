@@ -1,6 +1,7 @@
 const myModule = require('./index.js');
 const appadmin = require('./admin.js');
 const front = require('./front.js');
+const wd = require('./withdrawdeposit.js');
 
 const app = myModule.main;
 

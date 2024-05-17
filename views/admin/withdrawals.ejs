@@ -1,0 +1,188 @@
+  <%- include("../includes/admin-head", {activelink:"admindash"}); -%>
+
+      <div class="container-fluid content-inner pb-0">
+<div>
+   <div class="row">
+      <div class="col-sm-12">
+         <div class="card">
+           <div class="card-header">
+               <h4 class="card-title text-white">Withdrwal Request</h4>
+            </div>
+            <div class="d-flex mt-3 ms-4 me-4 justify-content-between">
+              <select class="form-select-custom" style="padding:10px 15px 10px 15px;color:#fff;background-color:#202022;background-repeat: no-repeat;
+                background-position: right 1rem center;
+
+                background-size: 16px 12px;
+                border: 1px solid #69697a;
+                border-radius: .5rem;" id="validationDefault04" required>
+                <option selected disabled value="">10</option>
+                <option>20</option>
+                <option>30</option>
+                <option>40</option>
+              </select>
+            <div class="form-outline">
+  <input type="search" id="form1" class="form-control ms-1" placeholder="Search.."
+  aria-label="Search" />
+</div>
+            </div>
+             <div class="card-body">
+                 <div class="table-responsive">
+                <table class="table">
+                   <thead class="">
+                                            <tr>
+                                                <th>email</th>
+                                                <th>Bal</th>
+                                                <th>W/amount</th>
+                                                <th>Wallet</th>
+                                                <th>Actions</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                          <% foundUsers.forEach(function(userdetail, index){ %>
+
+
+                                            <tr>
+                                                <td><%= userdetail.email %></td>
+                                                <td> $ <%= userdetail.balance %></td>
+                                                <td> $ <%= userdetail.withdraws[0].amount %></td>
+                                                
+                                                <td>
+                                                  <input style="font-size: 12px;" 
+                                                   class="form-control" type="text" value="<%= userdetail.withdraws[0].wallet %>">
+                                                </td>
+                                                <!-- Action Icon for all Users -->
+                                                <td>
+                                                  <form action="/approve-withdrawal" method="post">
+                                                    <button class="animation-btn" name="userID" value="<%= userdetail.id %>" type="submit"
+                                                      style="--clr:green"><span>Approve</span><i></i></button>
+
+                                                  </form>
+
+                                                  <!-- <div class="container-t">
+                                                    <div class="toggle" id="welcome-<%=index%>">
+
+                                                      <div class="toggle-button" onclick="Animatedtoggle()">
+
+
+
+                                                      </div>
+
+
+                                                    </div>
+                                                    <div class="text">Active
+
+                                                    </div>
+
+                                                  </div> -->
+
+
+
+
+                                                  <!-- <div class="dropdown">
+                                                     <span class="dropdown-toggle" id="dropdownMenuButton7" data-bs-toggle="dropdown" aria-expanded="false" role="button">
+                                                       Action Icon for all Users start - comment this out
+                                                       <svg width="25" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                         <path d="M11.4925 2.78906H7.75349C4.67849 2.78906 2.75049 4.96606 2.75049 8.04806V16.3621C2.75049 19.4441 4.66949 21.6211 7.75349 21.6211H16.5775C19.6625 21.6211 21.5815 19.4441 21.5815 16.3621V12.3341" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M8.82812 10.921L16.3011 3.44799C17.2321 2.51799 18.7411 2.51799 19.6721 3.44799L20.8891 4.66499C21.8201 5.59599 21.8201 7.10599 20.8891 8.03599L13.3801 15.545C12.9731 15.952 12.4211 16.181 11.8451 16.181H8.09912L8.19312 12.401C8.20712 11.845 8.43412 11.315 8.82812 10.921Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                                         </path><path d="M15.1655 4.60254L19.7315 9.16854" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                       </svg>
+                                                       Action Icon for all Users end -comment this out
+                                                     </span>
+
+                                                       <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton7">
+                                                          <a class="dropdown-item " href="/fund/user/ <%= userdetail.id %> ">Deposit</a>
+                                                          <a class="dropdown-item " href="/status/user/ <%= userdetail.id %> ">Change status</a>
+                                                          <a class="dropdown-item " href="/delete/user/ <%= userdetail.id %>">Something else here</a>
+                                                       </div>
+
+
+
+                                                  </div> -->
+
+                                                </td>
+
+
+
+
+
+                                            </tr>
+                                            <script>
+                                            let myName = "<%= userdetail._id%>";
+
+                                            </script>
+
+
+                                          <% }) %>
+
+
+
+
+                                        </tbody>
+
+<br />
+                </table>
+
+                <div class="d-flex justify-content-between flex-wrap">
+                  <div class="dataTables_info" id="example_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries</div>
+                 <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true"><svg width="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">                                    <path d="M15.5 19L8.5 12L15.5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>                                </svg>                            </span>
+                        </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true"><svg width="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">                                    <path d="M8.5 5L15.5 12L8.5 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>                                </svg>                            </span>
+                        </a>
+                        </li>
+                    </ul>
+                </nav>
+               </div>
+
+             </div>
+             </div>
+         </div>
+      </div>
+   </div>
+</div>
+      </div>
+      <footer class="footer">
+        <div class="footer-body">
+            <ul class="left-panel list-inline mb-0 p-0">
+                <li class="list-inline-item"><a href="/privacy-policy" class="text-white">Privacy Policy</a></li>
+                <li class="list-inline-item"><a href="/terms" class="text-white">Terms of Use</a></li>
+            </ul>
+            <div class="right-panel">
+                ©<script>document.write(new Date().getFullYear())</script> Pana Dev, Made with
+                <span class="text-gray">
+                    <svg width="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.85 2.50065C16.481 2.50065 17.111 2.58965 17.71 2.79065C21.401 3.99065 22.731 8.04065 21.62 11.5806C20.99 13.3896 19.96 15.0406 18.611 16.3896C16.68 18.2596 14.561 19.9196 12.28 21.3496L12.03 21.5006L11.77 21.3396C9.48102 19.9196 7.35002 18.2596 5.40102 16.3796C4.06102 15.0306 3.03002 13.3896 2.39002 11.5806C1.26002 8.04065 2.59002 3.99065 6.32102 2.76965C6.61102 2.66965 6.91002 2.59965 7.21002 2.56065H7.33002C7.61102 2.51965 7.89002 2.50065 8.17002 2.50065H8.28002C8.91002 2.51965 9.52002 2.62965 10.111 2.83065H10.17C10.21 2.84965 10.24 2.87065 10.26 2.88965C10.481 2.96065 10.69 3.04065 10.89 3.15065L11.27 3.32065C11.3618 3.36962 11.4649 3.44445 11.554 3.50912C11.6104 3.55009 11.6612 3.58699 11.7 3.61065C11.7163 3.62028 11.7329 3.62996 11.7496 3.63972C11.8354 3.68977 11.9247 3.74191 12 3.79965C13.111 2.95065 14.46 2.49065 15.85 2.50065ZM18.51 9.70065C18.92 9.68965 19.27 9.36065 19.3 8.93965V8.82065C19.33 7.41965 18.481 6.15065 17.19 5.66065C16.78 5.51965 16.33 5.74065 16.18 6.16065C16.04 6.58065 16.26 7.04065 16.68 7.18965C17.321 7.42965 17.75 8.06065 17.75 8.75965V8.79065C17.731 9.01965 17.8 9.24065 17.94 9.41065C18.08 9.58065 18.29 9.67965 18.51 9.70065Z" fill="currentColor"></path>
+                    </svg>
+                </span> by <a href="https://panaramallc.com">Panarama LLC</a>.
+            </div>
+        </div>
+    </footer>     </main>
+
+    <!-- Wrapper End -->
+    <!-- offcanvas start -->
+
+    <!-- Backend Bundle JavaScript -->
+    <script src="/dashboard-assets/js/approve.js"></script>
+    <script src="/dashboard-assets/js/toggle.js"></script>
+    <script src="https://gitcdn.github.io/bootstrap2-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+    <script src="/dashboard-assets/js/libs.min.js"></script>
+    <!-- widgetchart JavaScript -->
+    <script src="/dashboard-assets/js/charts/widgetcharts.js"></script>
+    <!-- fslightbox JavaScript -->
+    <script src="/dashboard-assets/js/fslightbox.js"></script>
+    <!-- app JavaScript -->
+    <script src="/dashboard-assets/js/app.js"></script>
+    <!-- apexchart JavaScript -->
+    <script src="/dashboard-assets/js/charts/apexcharts.js"></script>
+  </body>
+</html>
